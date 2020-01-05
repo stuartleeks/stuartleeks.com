@@ -1,4 +1,34 @@
 baseURL = "https://stuartleeks.com/"
 languageCode = "en-us"
-title = "placeholder"
+title = "stuart leeks"
+# theme = "beautifulhugo"
 theme = "ananke"
+
+[params]
+  subtitle = "My little corner of the interwebs"
+  mainSections = ["post","posts"]
+  rss = true
+#   featured_image = "/images/bridge1a.jpg"
+  featured_image = "/images/stones1a.jpg"
+
+[Author]
+  name = "Stuart Leeks"
+  website = "www.stuartleeks.com"
+  email = "youremail@domain.com"
+  facebook = "username"
+  github = "stuartleeks"
+  twitter = "stuartleeks"
+  linkedin = "stuartleeks"
+  stackoverflow = "users/202415/stuart-leeks"
+
+
+
+[[menu.main]]
+    name = "Blog"
+    url = ""
+    weight = 1
+
+[[menu.main]]
+    name = "About"
+    url = "about/"
+    weight = 3
