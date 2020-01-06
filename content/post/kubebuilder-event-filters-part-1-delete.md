@@ -7,9 +7,9 @@ subtitle: "Part 1: Filtering Deletes"
 
 ## Background
 
-A couple of projects recently have involved using [Kubebuilder](https://github.com/kubernetes-sigs/kubebuilder) to create Kubernetes operators.
+A couple of projects recently have involved using [Kubebuilder](https://github.com/kubernetes-sigs/kubebuilder) to create [Kubernetes operators](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/).
 
-Kubebuilder scaffolds out a go application and then lets you focus on writing the logic of the reconciliation loop. For getting started with Kubebuilder there is [Kubebuilder book](https://book.kubebuilder.io) which is a great walkthrough of creating a controller.
+Kubebuilder scaffolds out a go application and then lets you focus on writing the logic of the reconciliation loop which is the core part of the operator. For getting started with Kubebuilder there is [Kubebuilder book](https://book.kubebuilder.io) which is a great walkthrough of creating a controller.
 
 The reconciliation loop is invoked whenever one of the watched objects is created, modified or deleted. The first step in the reconciliation loop is typically to retrieve the object that triggered the invocation. Deletion is an interesting case as by the time the reconciliation loop is invoked the object no longer exists. Fortunately, Kubernetes has a concept called finalizers. If you add a finalizer to an object then when someone requests its deletion Kubernetes only marks is a being deleted (and then waits for the finalizers to be removed). In terms of the reconciliation loop, this means that it is invoked upon deletion but before the object is actually deleted allowing the object's details to be retrieved to be used in any clean-up steps.
 
