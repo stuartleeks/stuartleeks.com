@@ -14,8 +14,6 @@ theme = "beautifulhugo"
 [Author]
   name = "Stuart Leeks"
   website = "www.stuartleeks.com"
-  email = "youremail@domain.com"
-  facebook = "username"
   github = "stuartleeks"
   twitter = "stuartleeks"
   linkedin = "stuartleeks"
