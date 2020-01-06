@@ -1,6 +1,6 @@
 baseURL = "https://stuartleeks.com/"
 languageCode = "en-us"
-title = "stuart leeks"
+title = "stuartleeks.com"
 theme = "stuartleeks1"
 # theme = "beautifulhugo"
 # theme = "ananke"
