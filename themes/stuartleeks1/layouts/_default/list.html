@@ -8,10 +8,6 @@
           </div>
         {{ end }}
         <div class="posts-list">
-          <div>LIST1</div>
-          {{ .Type }}
-          <div>LIST</div>
-
           {{ range .Paginator.Pages }}
             {{ partial "post_preview.html" .}}
           {{ end }}
