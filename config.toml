@@ -1,8 +1,8 @@
 baseURL = "https://stuartleeks.com/"
 languageCode = "en-us"
 title = "stuart leeks"
-# theme = "beautifulhugo"
-theme = "ananke"
+theme = "beautifulhugo"
+# theme = "ananke"
 
 [params]
   subtitle = "My little corner of the interwebs"
@@ -25,7 +25,7 @@ theme = "ananke"
 
 [[menu.main]]
     name = "Blog"
-    url = ""
+    url = "/"
     weight = 1
 
 [[menu.main]]
