@@ -1,7 +1,8 @@
 baseURL = "https://stuartleeks.com/"
 languageCode = "en-us"
 title = "stuart leeks"
-theme = "beautifulhugo"
+theme = "stuartleeks1"
+# theme = "beautifulhugo"
 # theme = "ananke"
 
 [params]
@@ -30,3 +31,16 @@ theme = "beautifulhugo"
     name = "About"
     url = "about/"
     weight = 3
+
+[[menu.main]]
+    parent = "About"
+    name = "me"
+    url = "about"
+    weight = 1
+
+[[menu.main]]
+    parent = "About"
+    name = "theme"
+    url = "about/theme"
+    weight = 3
+

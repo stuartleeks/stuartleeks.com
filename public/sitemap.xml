@@ -3,11 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://stuartleeks.com/categories/</loc>
+    <loc>https://stuartleeks.com/post/</loc>
+    <lastmod>2020-01-06T07:34:41+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stuartleeks.com/post/kubebuilder-event-filters-part-1-delete/</loc>
+    <lastmod>2020-01-06T07:34:41+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stuartleeks.com/about/</loc>
+    <lastmod>2020-01-05T13:31:05+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stuartleeks.com/page/about/</loc>
+    <lastmod>2020-01-05T13:31:05+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stuartleeks.com/page/</loc>
+    <lastmod>2020-01-05T13:31:05+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://stuartleeks.com/</loc>
+    <lastmod>2020-01-05T13:31:05+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stuartleeks.com/categories/</loc>
   </url>
   
   <url>

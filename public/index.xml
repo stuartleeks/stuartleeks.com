@@ -1,14 +1,47 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>placeholder</title>
+    <title>stuart leeks</title>
     <link>https://stuartleeks.com/</link>
-    <description>Recent content on placeholder</description>
+    <description>Recent content on stuart leeks</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Sun, 05 Jan 2020 13:31:05 +0000</lastBuildDate>
     
 	<atom:link href="https://stuartleeks.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Using Event Filters with Kubebuilder</title>
+      <link>https://stuartleeks.com/post/kubebuilder-event-filters-part-1-delete/</link>
+      <pubDate>Mon, 06 Jan 2020 07:34:41 +0000</pubDate>
+      
+      <guid>https://stuartleeks.com/post/kubebuilder-event-filters-part-1-delete/</guid>
+      <description>Background A couple of projects recently have involved using Kubebuilder to create Kubernetes operators.
+Kubebuilder scaffolds out a go application and then lets you focus on writing the logic of the reconciliation loop which is the core part of the operator. For getting started with Kubebuilder there is Kubebuilder book which is a great walkthrough of creating a controller.
+The reconciliation loop is invoked whenever one of the watched objects is created, modified or deleted.</description>
+    </item>
+    
+    <item>
+      <title>About me</title>
+      <link>https://stuartleeks.com/about/</link>
+      <pubDate>Sun, 05 Jan 2020 13:31:05 +0000</pubDate>
+      
+      <guid>https://stuartleeks.com/about/</guid>
+      <description>Hello!
+TODO - put some stuff here!
+asdasd</description>
+    </item>
+    
+    <item>
+      <title>About me</title>
+      <link>https://stuartleeks.com/page/about/</link>
+      <pubDate>Sun, 05 Jan 2020 13:31:05 +0000</pubDate>
+      
+      <guid>https://stuartleeks.com/page/about/</guid>
+      <description>Hello!
+TODO - put some stuff here!</description>
+    </item>
     
   </channel>
 </rss>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on stuart leeks</title>
+    <link>https://stuartleeks.com/page/</link>
+    <description>Recent content in Pages on stuart leeks</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 05 Jan 2020 13:31:05 +0000</lastBuildDate>
+    
+	<atom:link href="https://stuartleeks.com/page/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About me</title>
+      <link>https://stuartleeks.com/page/about/</link>
+      <pubDate>Sun, 05 Jan 2020 13:31:05 +0000</pubDate>
+      
+      <guid>https://stuartleeks.com/page/about/</guid>
+      <description>Hello!
+TODO - put some stuff here!</description>
+    </item>
+    
+  </channel>
+</rss>
