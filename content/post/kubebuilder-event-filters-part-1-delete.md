@@ -26,7 +26,7 @@ if err := r.Get(ctx, req.NamespacedName, &cronJob); err != nil {
 }
 ```
 
-The subtlety of this code snippet was lost on me the first time I encountered it: the return statement calls `ignoreNotFound(err)` which returns `nil` if `err` is a `NotFound` error and the original error otherwise. The above snippet always calls `log.Error` which is quite verbose in the log output, so I prefer to write the code as something similar to this:
+The subtlety of this code snippet was lost on me the first time I encountered it: the return statement calls `ignoreNotFound(err)` which returns `nil` if `err` is a `NotFound` error and returns the original error otherwise. The above snippet always calls `log.Error` which is quite verbose in the log output, so I prefer to write the code as something similar to this:
 
 ```go {hl_lines=[7]}
 var cronJob batch.CronJob
@@ -72,7 +72,7 @@ type Predicate interface {
 }
 ```
 
-Since the reconiliation loop wasn't taking any action when invoked after the item is actually deleted the predicate for delete events can simply return `false`! There is also a handy ['Funcs'](https://godoc.org/sigs.k8s.io/controller-runtime/pkg/predicate#Funcs) type that implements the `Predicate` interface and allows you to pass in functions you want to use as predicates. Putting it all together to filter out the delete events, we have:
+Since the reconiliation loop wasn't taking any action when invoked after the item is actually deleted the predicate for delete events can simply return `false`! There is also a handy [`Funcs`](https://godoc.org/sigs.k8s.io/controller-runtime/pkg/predicate#Funcs) type that implements the `Predicate` interface and allows you to pass in functions you want to use as predicates. Putting it all together to filter out the delete events, we have:
 
 
 ```go
