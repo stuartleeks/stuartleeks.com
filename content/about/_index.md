@@ -13,3 +13,5 @@ As well as enjoying blogging I find it a useful way to keep a record of things t
 Anyway, that is a long-winded way of saying that since this process is geared up to be for my benefit I make no assertions that what I say is actually correct or useful to anyone else. Use any content here at your peril.
 
 I'm currently working as a Software Engineer for Microsoft in the UK. I'm sure it goes without saying that this is my personal blog and all opinions here are my own (but just in case that's not obvious, I've said it now anyway).
+
+I enjoy [writing and speaking](/about/publications-and-speaking) and [creating and contributing](/about/projects) to OSS projects.
