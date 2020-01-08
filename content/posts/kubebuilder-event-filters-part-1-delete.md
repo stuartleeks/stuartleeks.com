@@ -7,6 +7,8 @@ aliases:
  - /post/kubebuilder-event-filters-part-1-delete/
 ---
 
+**UPDATE (2020/01/08 ):** After testing this in another project I discovered that the `NotFound` checking is still required in the case where the reconciliation has been requeued and the object is deleted in the interim period. Even with this code, I still prefer not having the `NotFound` output in my logs for the default case.
+
 ## Background
 
 A couple of projects recently have involved using [Kubebuilder](https://github.com/kubernetes-sigs/kubebuilder) to create [Kubernetes operators](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/).
