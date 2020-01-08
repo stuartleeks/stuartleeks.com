@@ -46,6 +46,19 @@ Abstract: As developers push intellectual property to registries, how will you s
 
 Gave a lightning talk on WSL (Windows Subsystem for Linux)
 
+### December 2018 - KubeCon Seattle - Preconference workshops on Virtual Kubelet
+
+[Paul Bouwer](https://twitter.com/pbouwer) and I were invited to deliver the "Introduction to Virtual Kubelet" and "Building a provider for Virtual Kubelet" workshops that we created at the Microsoft pre-day workshops for KubeCon Seattle.
+
+### September 2018 - Container Camp London - Preconference workshops on Virtual Kubelet
+
+[Paul Bouwer](https://twitter.com/pbouwer) created and delivered "Introduction to Virtual Kubelet" and "Building a provider for Virtual Kubelet" workshops at the Container Camp conference in London.
+
+Content at
+
+* <https://github.com/paulbouwer/virtual-kubelet-workshop>
+* <https://github.com/stuartleeks/virtual-kubelet-workshop-building-a-provider/>
+
 ### June 2018 - .NET Oxford - Azure Durable Funkiness
 
 Gave a lightning talk at .NET Oxford user group on Durable Functions in Azure Functions.
