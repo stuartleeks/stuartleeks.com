@@ -1,6 +1,6 @@
 ---
 title: "Publications and speaking"
-date: 2020-01-05T13:31:05Z
+date: 2020-01-08T16:33:32Z
 draft: false
 type: page
 ---
