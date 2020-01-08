@@ -56,8 +56,8 @@ Gave a lightning talk on WSL (Windows Subsystem for Linux)
 
 Content at
 
-* <https://github.com/paulbouwer/virtual-kubelet-workshop>
-* <https://github.com/stuartleeks/virtual-kubelet-workshop-building-a-provider/>
+* [Introduction to Virtual Kubelet](https://github.com/paulbouwer/virtual-kubelet-workshop)
+* [Building a provider for Virtual Kubelet](https://github.com/stuartleeks/virtual-kubelet-workshop-building-a-provider/) (with links to sample lab implementations in [Go](https://github.com/stuartleeks/virtual-kubelet-web-mock-go), [Node.js](https://github.com/stuartleeks/virtual-kubelet-web-mock-nodejs), [C#](https://github.com/stuartleeks/virtual-kubelet-web-mock-csharp/) and [Python](https://github.com/stuartleeks/virtual-kubelet-web-mock-python) as well as a [UI to help see the status of the provider](https://github.com/stuartleeks/virtual-kubelet-web-ui))
 
 ### June 2018 - .NET Oxford - Azure Durable Funkiness
 
