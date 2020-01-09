@@ -14,7 +14,7 @@ and then goes on to say
 
 > Transports should be reused instead of created as needed. Transports are safe for concurrent use by multiple goroutines.
 
-That means that any of the examples below will re-use connections (assuming that the Body is fully read and closed.)
+That means that any of the examples below **will re-use connections** (assuming that the Body is fully read and closed.)
 
 Using `DefaultClient`:
 
@@ -41,7 +41,7 @@ Using a shared `Transport` value:
     client.Get("http://example.com")
 ```
 
-However, what will ***not*** work (from the perspective of re-using connections) is to create a new `Transport` instance for each `http.Client`:
+However, what **will not re-use connections** is to create a new `Transport` instance for each `http.Client`:
 
 ```go
     // New Transport for each client/call means that connections cannot be re-used
