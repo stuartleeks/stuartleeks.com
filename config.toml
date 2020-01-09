@@ -12,6 +12,8 @@ theme = "stuartleeks1"
 #   featured_image = "/images/bridge1a.jpg"
   featured_image = "/images/stones1a.jpg"
   includePhotoSwipe = false
+  favicon = "images/favicon.ico"
+
 
 [Author]
   name = "Stuart Leeks"
