@@ -5,12 +5,13 @@ theme = "stuartleeks1"
 # theme = "beautifulhugo"
 # theme = "ananke"
 
-[params]
+[Params]
   subtitle = "My little corner of the interwebs"
   mainSections = ["post","posts"]
   rss = true
 #   featured_image = "/images/bridge1a.jpg"
   featured_image = "/images/stones1a.jpg"
+  includePhotoSwipe = false
 
 [Author]
   name = "Stuart Leeks"
