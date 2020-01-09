@@ -2,6 +2,13 @@
 title: "Connection re-use in Golang with http.Client"
 date: 2020-01-08T20:45:55Z
 draft: false
+categories:
+ - technical
+ - golang
+tags:
+ - golang
+ - net/http
+ - scalability
 ---
 
 Just before Christmas I was working with [Eliise](https://dev.to/eliises/) and [Lawrence](https://blog.gripdev.xyz/) and we observed socket exhaustion during load testing of a Golang application that makes HTTP requests against an API. I hoped for a quick win and had a quick scan of the code but that confirmed that the was correctly reading the `Body` and calling `Close` - time to dig a bit deeper.
