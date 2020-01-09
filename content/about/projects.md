@@ -35,7 +35,7 @@ Code at: <https://github.com/stuartleeks/DurableFunctionsTypedSafeActivities>
 
 [Building a provider for Virtual Kubelet](https://github.com/stuartleeks/virtual-kubelet-workshop-building-a-provider/) (with links to sample lab implementations in [Go](https://github.com/stuartleeks/virtual-kubelet-web-mock-go), [Node.js](https://github.com/stuartleeks/virtual-kubelet-web-mock-nodejs), [C#](https://github.com/stuartleeks/virtual-kubelet-web-mock-csharp/) and [Python](https://github.com/stuartleeks/virtual-kubelet-web-mock-python) as well as a [UI to help see the status of the provider](https://github.com/stuartleeks/virtual-kubelet-web-ui))
 
-Delivered at [KubeCon Seattle 2018](/about/publications-and-speaking#december-2018---kubecon-seattle---preconference-workshops-on-virtual-kubelet) and [Container Camp London 2018](/about/publications-and-speaking#september-2018---container-camp-london---preconference-workshops-on-virtual-kubelet)
+Delivered at [KubeCon Seattle 2018]({{< relref "publications-and-speaking.md#december-2018---kubecon-seattle---preconference-workshops-on-virtual-kubelet" >}}) and [Container Camp London 2018]({{< relref "publications-and-speaking.md#september-2018---container-camp-london---preconference-workshops-on-virtual-kubelet" >}})
 
 ## Contributions
 
