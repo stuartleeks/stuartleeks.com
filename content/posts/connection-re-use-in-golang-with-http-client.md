@@ -11,7 +11,7 @@ tags:
  - scalability
 ---
 
-Just before Christmas I was working with [Eliise](https://dev.to/eliises/) and [Lawrence](https://blog.gripdev.xyz/) and we observed socket exhaustion during load testing of a Golang application that makes HTTP requests against an API. I hoped for a quick win and had a quick scan of the code but that confirmed that the was correctly reading the `Body` and calling `Close` - time to dig a bit deeper.
+Just before Christmas I was working with [Eliise](https://dev.to/eliises/) and [Lawrence](https://blog.gripdev.xyz/) and we observed port exhaustion during load testing of a Golang application that makes HTTP requests against an API. I hoped for a quick win and had a quick scan of the code but that confirmed that the was correctly reading the `Body` and calling `Close` - time to dig a bit deeper.
 
 After some head-scratching we noticed that the code creates a new `http.Client` for each request. Not only that, when it creates the `http.Client` it also assigns a [`Transport`](https://godoc.org/net/http#Transport) instance. This last piece is very important - the docs for `Transport` state:
 
