@@ -1,0 +1,6 @@
+baseURL = "https://stuartleeks.com/"
+title = "stuartleeks.com"
+theme = "stuartleeks1"
+
+[Params]
+  AppInsightsKey = "5170f2a6-fdef-4a79-a853-a9275db58c75"

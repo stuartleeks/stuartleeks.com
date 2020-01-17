@@ -1,9 +1,10 @@
-baseURL = "https://stuartleeks.com/"
+baseURL = "http://localhost:1313/"
 languageCode = "en-us"
 title = "stuartleeks.com"
 theme = "stuartleeks1"
 # theme = "beautifulhugo"
 # theme = "ananke"
+googleAnalytics = "XXX"
 
 [Params]
   subtitle = "My little corner of the interwebs"
