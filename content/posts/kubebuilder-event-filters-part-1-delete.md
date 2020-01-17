@@ -85,14 +85,14 @@ type Predicate interface {
 
 Since the reconiliation loop wasn't taking any action when invoked after the item is actually deleted the predicate for delete events can simply return `false`! There is also a handy [`Funcs`](https://godoc.org/sigs.k8s.io/controller-runtime/pkg/predicate#Funcs) type that implements the `Predicate` interface and allows you to pass in functions you want to use as predicates. Putting it all together to filter out the delete events, we have:
 
-
 ```go
 func (r *CronJobReconciler) SetupWithManager(mgr ctrl.Manager) error {
     return ctrl.NewControllerManagedBy(mgr).
         For(&batch.CronJob{}).
         WithEventFilter(predicate.Funcs{
             DeleteFunc: func(e event.DeleteEvent) bool {
-                // The reconciler adds a finalizer so we perform clean-up when the delete timestamp is added
+                // The reconciler adds a finalizer so we perform clean-up
+                // when the delete timestamp is added
                 // Suppress Delete events to avoid filtering them out in the Reconcile function
                 return false
             },
