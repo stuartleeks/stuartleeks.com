@@ -8,7 +8,7 @@ I like working at the terminal. No judgement if you don't, but for me the termin
 
 I also like to find ways to gradually improve my experience with the termina, and a while back I mentioned to [Lawrence](https://blog.gripdev.xyz/) that I'd created some git aliases to help me easily check out pull requests on github. He immediately replied pointing me to [github.com/ldez/prm (Pull Request Manager)](https://github.com/ldez/prm) which is an awesome tool for checking out pull requests locally and working with them.
 
-This is great for my workflow when I'm working with [GitHub](https://github.com) but I also spend time with repos on [Azure DevOps](https://dev.azure.com). Fortunately, I discovered the [azure-devops extenion](https://docs.microsoft.com/en-us/azure/devops/cli/?view=azure-devops) for the [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest).
+This is great for my workflow when I'm working with [GitHub](https://github.com) but I also spend time with repos on [Azure DevOps](https://azure.microsoft.com/en-us/services/devops/?nav=min). Fortunately, I discovered the [azure-devops extenion](https://docs.microsoft.com/en-us/azure/devops/cli/?view=azure-devops) for the [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest).
 
 Once installed and configured I can find and checkout PRs with `az repos pr list` and `az repos pr checkout --id <id>` as shown below.
 
