@@ -14,6 +14,7 @@ googleAnalytics = "XXX"
   featured_image = "/images/stones1a.jpg"
   includePhotoSwipe = false
   favicon = "images/favicon.ico"
+  socialShare = true
 
 
 [Author]
@@ -23,7 +24,6 @@ googleAnalytics = "XXX"
   twitter = "stuartleeks"
   linkedin = "stuartleeks"
   stackoverflow = "users/202415/stuart-leeks"
-
 
 
 [[menu.main]]

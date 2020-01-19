@@ -1,0 +1,2 @@
+<script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
+<a class="twitter-share-button" data-size="large" href="https://twitter.com/intent/retweet?text={{ if .IsNamedParams}}{{ .Get "text" }}{{ else }}{{ .Get 0 }}{{ end }}{{ with $.Page.Site.Author.twitter }}&via={{ . }}{{end}}">Tweet</a>

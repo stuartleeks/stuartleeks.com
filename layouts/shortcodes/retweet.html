@@ -1,0 +1,6 @@
+<script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
+{{ if .IsNamedParams }}
+<a class="twitter-share-buttonz" data-size="large" href="https://twitter.com/intent/retweet?tweet_id={{.Get "tweetid" }}">Retweet</a>
+{{ else }}
+<a class="twitter-share-buttonz" data-size="large" href="https://twitter.com/intent/retweet?tweet_id={{.Get 0 }}">Retweet</a>
+{{ end }}

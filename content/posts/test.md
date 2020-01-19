@@ -2,6 +2,8 @@
 title: "Placeholder"
 date: 2020-01-04T13:22:41Z
 draft: true
+tweetText: "Hello there!"
+subtitle: foo
 ---
 
 ## quick placeholder post
