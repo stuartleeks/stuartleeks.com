@@ -2,6 +2,11 @@
 title: "Working With Pull Requests in Azure Devops"
 date: 2020-01-17T13:16:36Z
 draft: false
+categories:
+ - technical
+tags:
+ - azure-devops
+ - pull-requests
 ---
 
 I like working at the terminal. No judgement if you don't, but for me the terminal feels like a comfortable and productive place :-)
