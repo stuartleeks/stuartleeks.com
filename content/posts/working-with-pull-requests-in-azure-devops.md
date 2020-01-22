@@ -4,11 +4,11 @@ date: 2020-01-17T13:16:36Z
 draft: false
 categories:
  - technical
- - tips
+ - tips-and-tricks
 tags:
  - azure-devops
  - pull-requests
- - tips
+ - tips-and-tricks
 ---
 
 I like working at the terminal. No judgement if you don't, but for me the terminal feels like a comfortable and productive place :-)
