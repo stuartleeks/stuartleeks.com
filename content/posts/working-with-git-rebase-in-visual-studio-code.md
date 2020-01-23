@@ -1,7 +1,7 @@
 ---
 title: "Working With Git Rebase in Visual Studio Code"
-date: 2020-01-21T13:16:36Z
-draft: true
+date: 2020-01-23T08:15:27Z
+draft: false
 categories:
  - technical
  - tips-and-tricks
@@ -21,9 +21,19 @@ Secondly, when you are in the middle of a rebase you can do `git rebase --abort`
 
 Also, since rebase creates new commits your old commits aren't deleted as part of the rebase and can still be accessed after completing the rebase if you want to go back. Not being deleted doesn't mean that they are easy to access; you could make a note of the commit ID, or you could just `git branch starting-point` (or some such) before the rebase and give yourself a nice easy name to refer to the original commit by. Then if you aren't happy with how the rebase went you can just `git checkout starting-point` to get back to the commit you were originally on.
 
-One final point on the safety net theme: your code and git state are all in your source folder - if you take a copy of that folder then you have a full backup of the state of your code and commit history! It may sound a little extreme, but it definitely helped give me confidence to perform a rebase on a couple of occasions :-)
+One final point on the safety net theme: your code and git state are all in your source folder. For example:
 
-This post is starting to get a little long for a mini-post, so I'll give a shout-out to the [Git Rebase Shortcuts](https://marketplace.visualstudio.com/items?itemName=trentrand.git-rebase-shortcuts) extension for Visual Studio Code. This extension is a bit of a niche extension, but I really like it!
+```
+ - your-project
+ |--.git
+ |--src
+ |--test
+ └- README.md
+```
+
+If you take a copy of the top project folder (`your-project` in the example above) then you have a full backup of the state of your code and commit history! It may sound a little extreme, but it definitely helped give me confidence to perform a rebase on a couple of occasions :-)
+
+I realise that this post is starting to get a little long for a mini-post, and I've not yet mentioned VS code (which is in the title!). The inspiration for this post was the fabuluous  [Git Rebase Shortcuts](https://marketplace.visualstudio.com/items?itemName=trentrand.git-rebase-shortcuts) extension for Visual Studio Code. This extension is a bit of a niche extension, but I really like it!
 
 When you do an interactive rebase, git prompts you with a file like the one below to determine what actions you want it to take. You can change move commits around to re-order them or change `pick` to `reword`, `squash`, etc to edit commit messages or squash a commit with the previous commit (in short, re-write your history).
 
