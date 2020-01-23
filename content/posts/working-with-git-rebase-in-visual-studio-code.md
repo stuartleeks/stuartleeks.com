@@ -1,4 +1,5 @@
 ---
+type: post
 title: "Working With Git Rebase in Visual Studio Code"
 date: 2020-01-23T08:15:27Z
 draft: false

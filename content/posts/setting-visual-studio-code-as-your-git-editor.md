@@ -1,4 +1,5 @@
 ---
+type: post
 title: "Setting Visual Studio Code As Your Git Editor"
 date: 2020-01-22T07:17:34Z
 draft: false

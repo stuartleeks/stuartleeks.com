@@ -1,4 +1,5 @@
 ---
+type: post
 title: "Connection re-use in Golang with http.Client"
 date: 2020-01-08T20:45:55Z
 draft: false

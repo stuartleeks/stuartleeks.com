@@ -1,4 +1,5 @@
 ---
+type: post
 title: "Using Event Filters with Kubebuilder"
 date: 2020-01-17T08:34:41Z
 draft: false
