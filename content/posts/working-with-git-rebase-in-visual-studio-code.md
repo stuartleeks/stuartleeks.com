@@ -11,7 +11,7 @@ tags:
  - tips-and-tricks
 ---
 
-Following the [git theme]({{< relref setting-visual-studio-code-as-your-git-editor.md >}}) for mini-posts, I thought I'd gitve `git rebase` a mention this time.
+Following the [git theme]({{< relref setting-visual-studio-code-as-your-git-editor.md >}}) for mini-posts, I thought I'd give `git rebase` a mention this time.
 
 When I first started working with git I found a way to pretend that it was a source control system like any other that I'd used. Eventually, I was working on a pull request for an OSS project and a maintainer asked me to rebase my changes. Now, I'd heard of rebase at that point but I hadn't used it, so I was a bit daunted. So this post has a few tips that I wish I'd known at that point. By way of encouragement, I'll add that getting familiar with git rebase is a huge part of the reason that I love git and has improved my developer workflow.
 
