@@ -2,7 +2,7 @@
 type: post
 title: "Working With Multiple Kubernetes Contexts"
 date: 2020-01-24T20:24:13Z
-draft: true
+draft: false
 categories:
  - technical
  - tips-and-tricks
