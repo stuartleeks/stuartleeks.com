@@ -55,7 +55,8 @@ To do this I've used the following:
 
 ```bash
 cp ~/.kube/config ~/.kube/config.bak && \
-    KUBECONFIG=/path/to/kubeconfig:~/.kube/config.bak kubectl config view --flatten > ~/.kube/config
+    KUBECONFIG=/path/to/kubeconfig:~/.kube/config.bak \
+    kubectl config view --flatten > ~/.kube/config
 ```
 
 This command takes a backup of the original config and then sets up the `KUBECONFIG` environment variable to point to a new `kubeconfig` file as well as the one in my user folder. Then it executes `kubectl config view --flatten` to output the resulting merged config and redirects it to the default `kubeconfig`. For temporary clusters I don't necessarily bother with this as it bloats my `kubeconfig` file, but for slightly more durable clusters it has proved very convenient!
