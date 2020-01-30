@@ -11,6 +11,7 @@ tags:
  - kubernetes
  - kubebuilder
  - operators
+ - controller-runtime
 aliases:
  - /post/kubebuilder-event-filters-part-1-delete/
 ---
