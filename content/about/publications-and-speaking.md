@@ -48,7 +48,7 @@ Abstract: As developers push intellectual property to registries, how will you s
 
 ### December 2019 - .NET Oxford - WSL
 
-Gave a lightning talk on WSL (Windows Subsystem for Linux)
+Gave a lightning talk on WSL (Windows Subsystem for Linux). ([Meetup blog post](https://www.danclarke.com/dotnetoxford-december-2018#wsl-linux-on-windows-dont-be-bashful))
 
 ### December 2018 - KubeCon Seattle - Preconference workshops on Virtual Kubelet
 
@@ -65,7 +65,7 @@ Content at
 
 ### June 2018 - .NET Oxford - Azure Durable Funkiness
 
-Gave a lightning talk at .NET Oxford user group on Durable Functions in Azure Functions.
+Gave a lightning talk at .NET Oxford user group on Durable Functions in Azure Functions. ([Meetup blog post](https://www.danclarke.com/dotnetoxford-june-2018#stuart-leeks-azure-durable-functions))
 
 ### February 2018 - Tech Ready - Building maturity for container applications
 
@@ -73,7 +73,7 @@ Re-delivered a session on considerations for building and deploying containerise
 
 ### November 2017 - .NET Oxford - PowerShell: the Swiss army knife for .NET devs
 
-Gave a lightning talk on tips and tricks with PowerShell for developers
+Gave a lightning talk on tips and tricks with PowerShell for developers. ([Meetup blog post](https://www.danclarke.com/dotnetoxford-nov-2017#powershell-the-swiss-army-knife-for.net-devs-with-stuart-leeks))
 
 ### July 2017 - Tech Ready - Building maturity for container applications
 
@@ -81,7 +81,7 @@ Presented on considerations for building and deploying containerised application
 
 ### January 2017 - .NET Oxford - DevOps'ing with Containers
 
-Had the honour of being the opening presentation at the first meetup of the .NET Oxford user group, presenting on Containers, how they work, and how they fit in development and operations flows.
+Had the honour of being the opening presentation at the first meetup of the .NET Oxford user group, presenting on Containers, how they work, and how they fit in development and operations flows. ([Meetup blog post](https://www.danclarke.com/our-first-net-oxford-meetup))
 
 ### November 2016 - UK Azure - DevOps'ing with Containers
 
