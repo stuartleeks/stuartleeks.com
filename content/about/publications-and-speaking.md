@@ -38,7 +38,7 @@ Presenting on our experience working with Kubernetes operators and being part of
 
 ### December 2019 - .NET Oxford - WSL2
 
-Gave a lightning talk on WSL 2 (Windows Subsystem for Linux version 2) and the improvements that it brings
+Gave a lightning talk on WSL 2 (Windows Subsystem for Linux version 2) and the improvements that it brings. ([Meetup-notes and video](https://www.dotnetoxford.com/posts/2019-12-lightning-talks#wsl2-and-vscode-remote-stuart-leeks))
 
 ### May 2019 - Microsoft Build Conference - From dev to production: Container lifecycle, monitoring, logging and troubleshooting
 
