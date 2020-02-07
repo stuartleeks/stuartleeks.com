@@ -30,7 +30,11 @@ In 2014 I spent some time working with Azure API Management with a customer, whi
 
 ## Speaking
 
-Speaking has been a part of most of my roles in some way (even unofficially) for the last decade and is something that I get a lot of enjoyment from. The list below are the highlights that I recall, but I 
+Speaking has been a part of most of my roles in some way (even unofficially) for the last decade and is something that I get a lot of enjoyment from. The list below are the highlights that I recall, but I'm sure that there are some that I will have missed!
+
+### February 2020 - Kubernetes London meetup
+
+Presenting on our experience working with Kubernetes operators and being part of a panel discussion at the [Kubernetes London meetup](https://www.meetup.com/Kubernetes-London/events/268473011/).
 
 ### December 2019 - .NET Oxford - WSL2
 
