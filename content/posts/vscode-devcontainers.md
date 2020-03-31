@@ -2,7 +2,7 @@
 type: post
 title: "Visual Studio Code and Devcontainers"
 subtitle: ""
-date: 2020-03-31T21:45:01Z
+date: 2020-03-31T20:45:01Z
 draft: false
 categories:
  - technical
