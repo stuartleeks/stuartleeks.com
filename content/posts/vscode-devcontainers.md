@@ -2,13 +2,14 @@
 type: post
 title: "Visual Studio Code and Devcontainers"
 subtitle: ""
-date: 2020-03-31T20:45:01Z
+date: 2020-03-31T20:45:01+0100
 draft: false
 categories:
  - technical
 tags:
  - vscode
  - containers
+ - devcontainers
 ---
 
 
