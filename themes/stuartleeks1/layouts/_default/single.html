@@ -3,7 +3,32 @@
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        {{ .Content }}
+        {{/*  {{ .Content }}  */}}
+        {{ $Content := .Content }}
+        {{- $anchor := .Site.Params.anchorSymbol | default "§" -}}
+
+        {{- with .Site.Params.anchorIcon -}}
+          {{- $icon := (replace (index $.Site.Data.SVG .) "icon" "icon anchor-icon") -}}
+          {{- $.Scratch.Set "icon" $icon -}}
+        {{- end -}}
+        {{- $icon := .Scratch.Get "icon" -}}
+        {{- $anchor := $icon | default .Site.Params.anchorSymbol | default "§" -}}
+
+        {{/*  {{- if .Site.Params.enableAnchorLink -}}  */}}
+        {{- $replacement := (printf `$1<a href="#$2" class="anchor-link">%s</a>$3$4` $anchor) -}}
+          {{/*  {{- $.Scratch.Set "replacement" $replacement -}}  */}}
+        {{/*  {{- else -}}
+          {{- $replacement := (printf `$1<span class="anchor-link">%s</span>$3$4` $anchor) -}}
+          {{- $.Scratch.Set "replacement" $replacement -}}
+        {{- end -}}  */}}
+        {{/*  {{- $replacement := .Scratch.Get "replacement" -}}  */}}
+
+        {{- $regexPatternHeadingsAnchor := `(<h[1-6] id="([^"]+)">)(.+)?(</h[1-6]+>)` -}}
+        {{- $regexReplacementHeadingsAnchor := $replacement -}}
+        {{- $Content = $Content | replaceRE $regexPatternHeadingsAnchor $regexReplacementHeadingsAnchor | safeHTML -}}
+          
+        {{ $Content }}
+
 
         {{ if .Params.tags }}
           <div class="blog-tags">

@@ -16,6 +16,30 @@ googleAnalytics = "XXX"
   favicon = "images/favicon.ico"
   socialShare = true
 
+  ######################################
+  # Headings Anchor
+
+  enableHeadingsAnchor = true
+
+  # Level range of headings
+  headingsOpt = "1-6"
+  # Note: regex format, default value
+  #       is 1-6, which is 1|2|3|4|5|6,
+  #       which is h1 to h6.
+
+  anchorSymbol = "#"
+  # Note: the anchorIcon has a higher
+  #       priority than anchorSybol
+  #       Default: §
+
+  anchorIcon = "link"
+  # Note: you can leave it empty("") to
+  #       fallback to the anchorSymbol
+
+  enableAnchorLink = true
+
+  enableAnchorAutoHide = true
+
 
 [Author]
   name = "Stuart Leeks"
