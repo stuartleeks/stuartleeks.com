@@ -4,6 +4,7 @@
   {
     "url": {{ .Permalink | jsonify }},
     "title": {{ .Title | jsonify }},
+    "subtitle": {{ .Params.subtitle | jsonify }},
     "date_published": {{ .Date.Format "2006-01-02T15:04:05Z07:00" | jsonify }},
     "date_published_display": {{ .Date.Format "Monday, 2 January, 2006 15:04" | jsonify }},
     "description": {{ .Summary | plainify | jsonify }},

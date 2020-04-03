@@ -15,7 +15,11 @@ googleAnalytics = "XXX"
   includePhotoSwipe = false
   favicon = "images/favicon.ico"
   socialShare = true
-
+  azureSearchApiKey= "E87CA53030690C95CA3D2D22C5CE5C6E"
+  azureSearchInstance = "stuartleekscom"
+  azureSearchIndex = "azureblob-index"
+  azureSearchResults = 25
+  
   ######################################
   # Headings Anchor
 
@@ -39,6 +43,9 @@ googleAnalytics = "XXX"
   enableAnchorLink = true
 
   enableAnchorAutoHide = true
+
+
+
 
 
 [Author]

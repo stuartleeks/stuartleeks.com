@@ -1,0 +1,58 @@
+<div class="posts-list" id="search-results">
+    Searching...
+</div>
+<script src="https://stuartleeks.com/js/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.1.0/mustache.min.js"></script>
+<script id="search-results-template" type="x-tmpl-mustache">
+    [[#value]]
+    <article class="post-preview">
+    <a href="[[ url ]]">
+        <h2 class="post-title">[[ title ]]</h2>
+    </a>
+    <span class="post-meta">
+        <i class="fas fa-calendar"></i>&nbsp;[[ date_published_display ]] <!-- TODO - get author from result-->&nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp; Stuart Leeks
+    </span>
+    <div class="post-entry">
+        [[ description ]]
+    </div>
+    <div class="blog-tags">
+        [[#tags]]<a href="tags/[[.]]/">[[ . ]]</a>&nbsp;[[/tags]]
+    </div>
+    </article>
+    [[/value]]
+</script>
+<!-- TODO show tag facets -->
+
+<script>
+    (function() {
+        Mustache.tags = ['[[', ']]', ];
+        var template = document.getElementById("search-results-template").innerHTML;
+        Mustache.parse(template);
+
+        var query = getUrlParameter('search');
+
+        var azSearchInstance = '{{ .Site.Params.azureSearchInstance }}';
+        var azSearchIndex = '{{ .Site.Params.azureSearchIndex }}';
+        var azApiKey = '{{ .Site.Params.azureSearchApiKey }}';
+        var azSearchResults = '{{ .Site.Params.azureSearchResults }}';
+        var encodedQuery = encodeURIComponent(query);
+
+        $.ajax({
+            url: 'https://' + azSearchInstance + '.search.windows.net/indexes/' +
+                azSearchIndex + '/docs?api-version=2019-05-06&$top=' + azSearchResults +
+                '&api-key=' + azApiKey + '&highlight=title,description&$select=url,title,date_published_display,description,tags&search=' + encodedQuery,
+            method: 'GET'
+        }).done(function(data) {
+            // display results
+            var render = Mustache.render(template, data);
+            $("#search-results").html(render)
+        });
+
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        };
+    })();
+</script>

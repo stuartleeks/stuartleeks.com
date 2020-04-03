@@ -12,7 +12,17 @@
 
     <div class="collapse navbar-collapse" id="main-navbar">
       <ul class="nav navbar-nav navbar-right">
-        {{ range .Site.Menus.main.ByWeight }}
+        <li>
+          <a href="#modalSearch" data-toggle="modal" data-target="#modalSearch" style="outline: none;">
+              <form class="form-inline" method="GET" action="/search">
+                  <div class="form-group search-form" style="display: inline-block;">
+                      <input name="search" type="text" class="form-control" placeholder="search...">
+                      <span class="fa fa-search form-control-feedback"></span>
+                  </div>
+              </form>
+          </a>
+      </li>
+      {{ range .Site.Menus.main.ByWeight }}
           {{ if .HasChildren }}
             <li class="navlinks-container">
               <a class="navlinks-parent">{{ .Name }}</a>
