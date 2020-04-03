@@ -72,3 +72,12 @@ googleAnalytics = "XXX"
     url = "about/theme"
     weight = 3
 
+
+[outputFormats.JSON]
+  mediaType = "application/json"
+  baseName = "feed"
+  path = "searchindex"
+  isPlainText = true
+
+[outputs]
+  home = ["HTML", "JSON"]
