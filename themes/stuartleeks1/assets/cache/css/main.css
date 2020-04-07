@@ -325,6 +325,16 @@ img {
     }
 }
 
+.edit-image {
+    height: 20px;
+    padding-left:5px;
+    margin-top: -5px;
+    display:inline-block;
+}
+
+.edit-link {
+    display:inline-block;
+}
 
 /* --- Footer --- */
 
