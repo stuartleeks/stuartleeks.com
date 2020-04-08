@@ -75,9 +75,21 @@ googleAnalytics = "XXX"
 
 [[menu.main]]
     parent = "About"
+    name = "Writing and Speaking"
+    url = "about/writing-and-speaking"
+    weight = 2
+
+[[menu.main]]
+    parent = "About"
+    name = "Projects and Contributions"
+    url = "about/projects"
+    weight = 3
+
+[[menu.main]]
+    parent = "About"
     name = "theme"
     url = "about/theme"
-    weight = 3
+    weight = 10
 
 
 [outputFormats.JSON]

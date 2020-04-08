@@ -14,5 +14,5 @@ Anyway, that is a long-winded way of saying that since this process is geared up
 
 I'm currently working as a Software Engineer for Microsoft in the UK. I'm sure it goes without saying that this is my personal blog and all opinions here are my own (but just in case that's not obvious, I've said it now anyway).
 
-I enjoy [writing and speaking]({{< relref publications-and-speaking >}}) and [creating and contributing]({{< relref projects >}}) to OSS projects.
+I enjoy [writing and speaking]({{< relref writing-and-speaking >}}) and [creating and contributing]({{< relref projects >}}) to OSS projects.
 

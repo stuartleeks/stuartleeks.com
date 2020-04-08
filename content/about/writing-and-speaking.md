@@ -1,13 +1,15 @@
 ---
-title: "Publications and speaking"
+title: "Writing and speaking"
 date: 2020-01-08T16:33:32Z
 draft: false
 type: page
+aliases:
+ - /about/publications-and-speaking/
 ---
 
 I get a lot of enjoyment from sharing ideas in both written and spoken form. This page has a summary of publications and speaking events.
 
-## Publications
+## Writing
 
 In addition to this blog and the items below I also previously blogged at <https://blogs.msdn.microsoft.com/stuartleeks>.
 
