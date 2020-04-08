@@ -3,6 +3,7 @@ type: post
 title: "Visual Studio Code and Devcontainers in the Windows Subsystem for Linux (WSL)"
 subtitle: ""
 date: 2020-04-01T19:18:23+0100
+lastMod: 2020-04-08T20:47:10+0100
 draft: false
 categories:
  - technical
@@ -14,6 +15,8 @@ tags:
 ---
 
 > NOTE at the time of writing, several of the features/components mentioned in this post are in preview, but will hopefully hit GA soon. As with all preview bits there can be rough edges so follow these steps at your own discretion!
+
+> UPDATE (2020-04-08): With the [1.44 release](https://code.visualstudio.com/updates/v1_44) of Visual Studio Code (and the corresponding [Remote Containers release](https://github.com/microsoft/vscode-docs/blob/master/remote-release-notes/v1_44.md)), the Insiders release is no longer needed as the . I have updated the post to reflect this (update made in vscode devcontainer on stable release 😁).
 
 ## Introduction
 
@@ -29,7 +32,7 @@ To run containers on Windows you would normally install Docker for Windows. Dock
 
 ![Screenshot showing the WSL integration enabled in Docker for Windows](docker-for-windows-wsl-integration.png)
 
-Next we need Visual Studio Code and the Remote Containers extension. Again, we need the preview (Insiders) version of VS Code right now which can be [installed from here](https://code.visualstudio.com/insiders/).  Insiders is needed as the updated extension requires VS Code version 1.44, but hopefully that will be available in the main release very soon (check the latest version [here](https://code.visualstudio.com/updates)). When you start up VS Code, make sure you have the [Remote Extension Pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack) extension installed.
+Next we need Visual Studio Code and the Remote Containers extension. Get [Visual Studio Code here](https://code.visualstudio.com/Download) and then make sure you have the [Remote Extension Pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack) extension installed.
 
 Finally, the WSL integration is currently in experimental mode so it isn't enabled by default. In the command palette (`Ctrl + Shift + P` by default) type `user settings` and hit Enter to load the user settings. In the settings search bar type `experimental WSL` and tick the box to enable the option.
 
@@ -68,7 +71,7 @@ To work around this until this workflow is enabled I have created a couple of fu
 
 Using these opens VS Code (or VS Code Insiders) without using the Remote-WSL extension and translates the WSL path to the `\\wsl$\...` form.
 
-For example, `wcode-insiders .` will open the current folder using the `\\wsl$\...` path in VS Code Insiders.
+For example, `wcode .` will open the current folder using the `\\wsl$\...` path in VS Code Insiders.
 
 ## Lots of preview bits
 
@@ -76,7 +79,7 @@ The steps in this post use a lot of preview features and I realise that this mig
 
 [WSL 2 is going to be shipped in Windows 10 version 2004](https://devblogs.microsoft.com/commandline/wsl2-will-be-generally-available-in-windows-10-version-2004/) which will hopefully be released soon. Once this is released then hopefully Docker for Windows support for WSL will also come out of preview.
 
-The dependency on VS Code Insiders for running the latest Remote-Containers extension should go away when the next VS Code release lands. Based on the previous timings, hopefully that will be in the next week or so.
+~~The dependency on VS Code Insiders for running the latest Remote-Containers extension should go away when the next VS Code release lands. Based on the previous timings, hopefully that will be in the next week or so.~~ Now in the stable VS Code release :-)
 
 Once all the pieces above come out of preview, the remaining part is the 'experimental' piece. My understanding is that the team want to allow chance for these changes to be tested by early adopters (and who can blame them wanting to add verification of my code 😉) as well as smoothing out the rough edges.
 
