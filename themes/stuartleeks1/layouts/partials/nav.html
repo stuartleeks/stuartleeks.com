@@ -22,9 +22,11 @@
               </form>
           </a>
         </li>
+        {{ with .File }}
         <li class="navlinks-container">
-          <a href="https://github.com/stuartleeks/stuartleeks.com/tree/master/content/{{ .File.Path }}">Edit<img class="edit-image" src="/img/edit.png" /></a>
+          <a class="edit-link" href="https://github.com/stuartleeks/stuartleeks.com/tree/master/content/{{ .Path }}">Edit<img class="edit-image" src="/img/edit.png" /></a>
         </li>
+        {{ end }}
       {{ range .Site.Menus.main.ByWeight }}
           {{ if .HasChildren }}
             <li class="navlinks-container">
