@@ -336,6 +336,10 @@ img {
     display:inline-block;
 }
 
+.search-box {
+    margin-top: -6px;
+}
+
 /* --- Footer --- */
 
 footer {
