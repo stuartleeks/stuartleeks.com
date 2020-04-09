@@ -59,6 +59,6 @@ I've made a few contributions to the [AzureRm provider for Terraform](https://gi
 
 A fellow team started the [Azure Databricks Operator](https://github.com/microsoft/azure-databricks-operator/) project to create a Kubernetes operator for working with Azure Databricks and as part of a customer engagement I've made several contributions to the project.
 
-### VS Code REmote Containers (aka devcontainers)
+### VS Code Remote Containers (aka devcontainers)
 
 Contributed the initial work to enable devcontainers to work with source code in WSL 2: https://github.com/microsoft/vscode-docs/blob/master/remote-release-notes/v1_44.md#progress-on-wsl-and-wsl-2-support
