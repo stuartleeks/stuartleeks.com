@@ -1,8 +1,8 @@
 ---
 type: post
 title: "Fixing Clock Skew with WSL 2"
-date: 2020-04-23T22:27:16+0100
-draft: true
+date: 2020-04-23T21:27:16+0100
+draft: false
 categories:
  - technical
 tags:
