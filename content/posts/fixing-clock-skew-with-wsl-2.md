@@ -2,6 +2,7 @@
 type: post
 title: "Fixing Clock Skew with WSL 2"
 date: 2020-04-23T21:27:16+0100
+lastMod:  2020-04-24T07:16:20+0100
 draft: false
 categories:
  - technical
@@ -27,6 +28,8 @@ The manual workaround for this is to run `sudo hwclock -s` in the VM. I've been 
 ## What's new?
 
 In my experience many of the best (most fun?) ideas come from random conversations with people. In this case I read a [tweet from Noel Bundick](https://twitter.com/acanthamoeba/status/1252840371358273536) that sparked something in my head. A little while later [wsl-clock](https://github.com/stuartleeks/wsl-clock) was born.
+
+> Side note: Noel has taken a different approach after seeing this solution and [integrated it into his bash prompt](https://twitter.com/acanthamoeba/status/1253094110266712064?s=09). Just mentioning in case that approach resonates more with you (but [be warned](https://twitter.com/acanthamoeba/status/1253420742768685056) 😉)
 
 There were a bunch of thoughts that went through my head but any attempt to describe them here would lead to imposing an order and impression of logical thought process that would be nothing more than a flattering fabrication.
 
