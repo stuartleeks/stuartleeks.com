@@ -19,6 +19,10 @@ When working with some PowerShell modules, there can be a large number of cmdlet
 
 Code at <https://github.com/stuartleeks/posh-humpcompletion>
 
+### pi-bell - a Raspberry Pi powered networked doorbell
+
+The [pi-bell](https://github.com/stuartleeks/pi-bell) is a networked doorbell project written in Go for the Raspberry Pi. It allows multiple chimes to be connected over the network to a bellpush.
+
 ### Kips-operator - an exploration of Kubernetes operators and Azure Relay Bridge
 
 This project was an opportunity to explore building Kubernetes operators with Kubebuilder. It takes the [Azure Relay Bridge](https://github.com/clemensv/azure-relay-bridge) that [Clemens Vasters](https://twitter.com/clemensv) created and integrates it with an operator to provide a way to redirect services running in your Kubernetes cluster to applications running on your local machine.
