@@ -22,7 +22,7 @@ I switched to using SSH key auth for GitHub and Azure DevOps Repos a long time a
 
 With the Agent running I could run `ssh-add` to add my keys (prompting me for my pass phrase). Since I have these keys [added to GitHub](https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account), I could [test my ssh connection to GitHub](https://help.github.com/en/github/authenticating-to-github/testing-your-ssh-connection) using `ssh -T git@github.com`. This all worked so I was happy.
 
-I have been using WSL quite a bit recently and configured to forward SSH requests to the Windows SSH Agent (that's a topic for another post), and the same `ssh -T git@github.com` works in WSL, too.
+I have been using WSL quite a bit recently and configured to forward SSH requests to the Windows SSH Agent (that's a topic for [another post]({{< relref wsl-ssh-key-forward-to-windows.md>}})), and the same `ssh -T git@github.com` works in WSL, too.
 
 Since configuring this, I've been happily working with `git` in the terminal with WSL for a while. Today I wanted to work with some code that I had cloned in Windows, so ran a `git remote update` to check that I was up-to-date, but that prompted me for my passphrase. At this point I was confused: this is all working fine in WSL without prompting me, and WSL is configured to forward the SSH auth to the OpenSSH Agent in Windows!
 
