@@ -21,9 +21,9 @@ As I mentioned in my [previous post]({{< relref git-for-windows-ssh-key-passphra
 
 For day-to-day working this worked okay, but I finally got round to adding passphrases to my keys a while back and was less happy with the setup at that point. My previously suppressed niggles around having the keys in multiple places re-surfaced once I had to add handle passphrases in multiple systems on the same machine!
 
-As it happens, recent versions of Windows ship with the OpenSSH Agent and Server but I didn't want to have two SSH Authentication services each with their own set of keys. My last post shows [how to get git in Windows to use the OpenSSH Agent]({{< relref git-for-windows-ssh-key-passphrases.md >}}) to retrieve keys. In this post, I'll walk through the journey to get SSH in WSL using keys from the Windows SSH Agent.
+As it happens, recent versions of Windows ship with the OpenSSH Agent and Server but I didn't want to have two SSH Authentication services each with their own set of keys. My last post shows [how to get git in Windows to use the OpenSSH Agent]({{< relref git-for-windows-ssh-key-passphrases.md >}}) to retrieve keys. In this post, I'll walk through the journey to get SSH in WSL using keys from the Windows OpenSSH Agent. For details on installing and setting up the Windows OpenSSH Agent see [the docs](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse).
 
-If you just want to set it up then skip to the [final solution](#final-solution)! Otherwise, let me take you on a tour...
+If you just want to set up the WSL SSH forwarding then skip to the [final solution](#final-solution)! Otherwise, let me take you on a tour...
 
 ## Initial investigation
 
