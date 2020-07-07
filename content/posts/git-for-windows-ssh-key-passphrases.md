@@ -16,7 +16,7 @@ Disclaimer: this post is one to file under "things I'm blogging in the hope that
 
 ## Background
 
-I switched to using SSH key auth for GitHub and Azure DevOps Repos a long time ago and never looked back. For a while I was using SSH keys without passphrases but got round to adding passphrases a while back. I set up the Windows OpenSSH Authentication Agent - the service defaults to Disabled so I set it as Automatic start and nudged it to Running.
+I switched to using SSH key auth for GitHub and Azure DevOps Repos a long time ago and never looked back. For a while I was using SSH keys without passphrases but got round to adding passphrases a while back. I set up the Windows OpenSSH Authentication Agent - the service defaults to Disabled so I set it as Automatic start and nudged it to Running. (For more information, see the [docs on installing Windows OpenSSH](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse))
 
 ![Windows Services showing OpenSSH Authentication Agent Running](windows-services.png)
 
