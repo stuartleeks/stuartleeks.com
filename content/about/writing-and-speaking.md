@@ -13,6 +13,12 @@ I get a lot of enjoyment from sharing ideas in both written and spoken form. Thi
 
 In addition to this blog and the items below I also previously blogged at <https://blogs.msdn.microsoft.com/stuartleeks>.
 
+### WSL 2: Tips, Tricks and Techniques
+
+After a number of blog posts and user group sessions on the Windows Subsystem for Linux (WSL), I was approached by Packt Publishing to write a book! The books is a practical, hands-on tour of WSL and covers tips for working with it alongside Windows Terminal, Docker, Kubernetes and Visual Studio Code
+
+<https://wsl.tips/book>
+
 ### MSDN Magazine
 
 #### October 2018 - Deploying to Azure App Service and Azure Functions
