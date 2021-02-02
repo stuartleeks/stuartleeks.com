@@ -75,7 +75,7 @@ Success!
 
 Or almost :-)
 
-It turns out that there are a few challenges with this, at least there are when you put it into your `.bashrc` so that it runs automatically when you start your terminal.
+It turns out that there are a few challenges with this, at least there are when you put it into your `.bashrc` or `.bash_profile` so that it runs automatically when you start your terminal.
 
 ## Fixing up the script
 
@@ -134,7 +134,7 @@ At this point, it can all be put together...
 
 ## Final solution
 
-The end result is that once `socat` is installed in WSL, and `npiperelay` is (See how to [get the tools](#get-the-tools)), you can add this script to your `~/.bashrc`.
+The end result is that once `socat` is installed in WSL, and `npiperelay` is (See how to [get the tools](#get-the-tools)), you can add this script to your `~/.bash_profile` or  `~/.bashrc`.
 
 Note that this also requires that you have set up the SSH Agent in Windows and added your keys to it (as mentioned in the [previous post]({{< relref git-for-windows-ssh-key-passphrases.md >}})).
 
