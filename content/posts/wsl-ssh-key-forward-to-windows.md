@@ -158,3 +158,6 @@ fi
 ```
 
 With all this in place your SSH keys will be handled by the Open SSH Agent in Windows and SSH in WSL will access them from there!
+
+
+P.S. If you liked this, you may also like my book "WSL 2: Tips, Tricks and Techniques" which covers tips for working with WSL 2, Windows Terminal, VS Code dev containers and more <https://wsl.tips/pre-order> :-)

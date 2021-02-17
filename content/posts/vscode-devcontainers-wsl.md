@@ -14,8 +14,6 @@ tags:
  - WSL
 ---
 
-> NOTE at the time of writing, several of the features/components mentioned in this post are in preview, but will hopefully hit GA soon. As with all preview bits there can be rough edges so follow these steps at your own discretion!
-
 > UPDATE (2020-04-08): With the [1.44 release](https://code.visualstudio.com/updates/v1_44) of Visual Studio Code (and the corresponding [Remote Containers release](https://github.com/microsoft/vscode-docs/blob/master/remote-release-notes/v1_44.md)), the Insiders release is no longer needed as the . I have updated the post to reflect this (update made in vscode devcontainer on stable release 😁).
 
 ## Introduction
@@ -26,9 +24,9 @@ This is something that I've wanted to be able to do for a while and after some d
 
 ## Getting set up
 
-To get all of this working you need to have [WSL 2](https://docs.microsoft.com/en-us/windows/wsl/wsl2-index). This is currently only available via the Windows Insider program - see the docs for [WSL 2 installation instructions](https://docs.microsoft.com/en-us/windows/wsl/wsl2-install).
+To get all of this working you need to have [WSL 2](https://docs.microsoft.com/en-us/windows/wsl/wsl2-index). ~~This is currently only available via the Windows Insider program - see the docs for [WSL 2 installation instructions](https://docs.microsoft.com/en-us/windows/wsl/wsl2-install).~~
 
-To run containers on Windows you would normally install Docker for Windows. Docker for Windows normally starts up a Linux VM to run the Docker daemon in, but there is now support for [running the daemon in WSL2](https://docs.docker.com/docker-for-windows/wsl-tech-preview/) - again, at the time of writing this is a preview feature. When you have installed Docker for Windows, open settings and ensure that the WSL integration is turned on and enabled for any WSL distributions that you want to run your devcontainers in.
+To run containers on Windows you would normally install Docker for Windows. Docker for Windows used to starts up a Linux VM to run the Docker daemon in, but there is now support for [running the daemon in WSL2](https://docs.docker.com/docker-for-windows/wsl/) - open settings and ensure that the WSL integration is turned on and enabled for any WSL distributions that you want to run your devcontainers in.
 
 ![Screenshot showing the WSL integration enabled in Docker for Windows](docker-for-windows-wsl-integration.png)
 
@@ -46,9 +44,7 @@ Now that everything is installed, let's clone a sample project to give it a spin
 
 Run bash (e.g `Win+R` and `bash`), navigate to a folder where you want to clone the source code and run `git clone https://github.com/Microsoft/vscode-remote-try-python`.
 
-To load this in VS Code and be able to work on it in a devcontainer we need to load VS Code and then open the source code via the `\\wsl$\...` share that exposes the contents of the WSL file system to Windows. I believe that this is a temporary quirk that the team intend to resolve.
-
-To to this, `cd` into the source folder and then run `wslpath -w .` (note the `.`). This will print the Windows path to the current folder using the `\\wsl$` share. Copy this to the clipboard (or run `wslpath -w . | clip.exe` to put it on the clipboard for you!) and open that path in VS Code.
+To load this in VS Code and be able to work on it in a devcontainer we can load the code from the bash prompt via `code .`.
 
 Once VS Code has loaded the workspace and extensions you should get a toast notification prompting you to reopen the folder as a devcontainer. (If you don't get the prompt then select "Remote-Containers: Reopen in Container" in the command palette). Click this to reopen the folder in a devcontainer.
 
@@ -61,30 +57,15 @@ The left side of the status bar has a handy indicator that you are running in a 
 ![](vscode-status-bar.png)
 
 
-## Launching from bash
-
-My usual flow for opening code is to navigate to the folder in bash or powershell and then run `code .` to launch VS Code for the current folder. Doing this from bash loads the folder via the Remote-WSL extension which unfortunately doesn't currently allow the folder to be re-opened in a devcontainer.
-
-To work around this until this workflow is enabled I have created a couple of functions and added them to my `~/.bashrc`:
-
-{{< gist stuartleeks 005bcdb6da319b29bc1c20a6d0a7e8a8 helpers.sh >}}
-
-Using these opens VS Code (or VS Code Insiders) without using the Remote-WSL extension and translates the WSL path to the `\\wsl$\...` form.
-
-For example, `wcode .` will open the current folder using the `\\wsl$\...` path in VS Code Insiders.
-
 ## Lots of preview bits
 
-The steps in this post use a lot of preview features and I realise that this might not be for everyone!
-
-[WSL 2 is going to be shipped in Windows 10 version 2004](https://devblogs.microsoft.com/commandline/wsl2-will-be-generally-available-in-windows-10-version-2004/) which will hopefully be released soon. Once this is released then hopefully Docker for Windows support for WSL will also come out of preview.
-
-~~The dependency on VS Code Insiders for running the latest Remote-Containers extension should go away when the next VS Code release lands. Based on the previous timings, hopefully that will be in the next week or so.~~ Now in the stable VS Code release :-)
-
-Once all the pieces above come out of preview, the remaining part is the 'experimental' piece. My understanding is that the team want to allow chance for these changes to be tested by early adopters (and who can blame them wanting to add verification of my code 😉) as well as smoothing out the rough edges.
+When originally written, the steps in this post used a lot of preview features but now they are all generally available and I realise that this might not be for everyone!
 
 ## Summary
 
 Whilst it is currently early days for the WSL/devcontainers integration, I'm excited to see it coming. I'm a huge fan of devcontainers but have hit a few edge cases with them. One area is around mounting the Windows file system into a Linux container. To do this the file access has to go through a translation layer; one side effect of this is reduced performance. One repo I tried working with in a devcontainer took around 10 seconds to display the terminal prompt each time you hit Enter because it had [bash-git-prompt](https://github.com/magicmonty/bash-git-prompt) and calling out to `git status` took a long time as a result of the file system translation. Adding the ability to use devcontainers with code in WSL removes these issues as the volume being mounted in the container is already a Linux file system.
 
 It's early days, but I'm excited to see where this goes 😁.
+
+
+P.S. If you liked this, you may also like my book "WSL 2: Tips, Tricks and Techniques" which covers tips for working with WSL 2, Windows Terminal, VS Code dev containers and more <https://wsl.tips/pre-order> :-)

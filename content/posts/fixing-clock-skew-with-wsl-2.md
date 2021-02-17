@@ -114,3 +114,6 @@ With that we can set the action to run powershell and execute the clock reset sc
 In the [source code on GitHub](https://github.com/stuartleeks/wsl-clock), I've created a powershell script to create the scheduled task for you which sets up the task action to run the update clock script in a hidden window so that there's no flash of a console window.
 
 If you want to give it a spin (please note that this is not a supported workaround!) then head to the [GitHub repo](https://github.com/stuartleeks/wsl-clock) to clone it and run the install script!
+
+
+P.S. If you liked this, you may also like my book "WSL 2: Tips, Tricks and Techniques" which covers tips for working with WSL 2, Windows Terminal, VS Code dev containers and more <https://wsl.tips/pre-order> :-)
