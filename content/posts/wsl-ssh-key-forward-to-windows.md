@@ -109,7 +109,7 @@ ALREADY_RUNNING=$(ps -auxww | grep -q "[n]piperelay.exe -ei -s //./pipe/openssh-
 
 Unfortunately, my notes for this part are missing some details, but I hit a scenario where sometimes the socket already existed. 
 
-For this I added a test using the `-S` condition (a list of condition expressions can be found [here](http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html#tab_07_01_).
+For this I added a test using the `-S` condition (a list of condition expressions can be found [here](http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html#tab_07_01_)).
 
 If our `socat` command isn't running then I added this check before starting it:
 
