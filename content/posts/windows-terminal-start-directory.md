@@ -57,4 +57,4 @@ Here's an example of the finished result:
 
 Enjoy!
 
-P.S. If you liked this, you may also like my upcoming book "WSL 2: Tips, Tricks and Techniques" - [available for pre-order](https://wsl.tips/pre-order) :-)
+P.S. If you liked this, you may also like my book "WSL 2: Tips, Tricks and Techniques" which covers tips for working with WSL 2, Windows Terminal, VS Code dev containers and more <https://wsl.tips/book> :-)
