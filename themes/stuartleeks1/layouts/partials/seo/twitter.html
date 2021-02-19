@@ -6,6 +6,7 @@
 {{- end }}
 {{- with .Params.share_img | default .Params.image  | default .Site.Params.share_img | default .Site.Params.logo }}
   <meta name="twitter:image" content="{{ . | absURL }}" />
+  <meta name="og:image" content="{{ . | absURL }}" />
 {{- end }}
   <meta name="twitter:card" content="summary" />
 {{- with .Site.Author.twitter }}
