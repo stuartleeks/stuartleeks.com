@@ -3,6 +3,7 @@ type: post
 title: "Forwarding SSH Agent requests from WSL to Windows"
 date: 2020-07-03T15:11:12Z
 draft: false
+description: "Store your SSH keys in Windows and access them from your WSL distros"
 categories:
  - technical
  - tips-and-tricks

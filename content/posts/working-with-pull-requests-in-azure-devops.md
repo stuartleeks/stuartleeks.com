@@ -2,6 +2,7 @@
 type: post
 title: "Working With Pull Requests in Azure Devops"
 date: 2020-01-17T13:16:36Z
+description: "Work with Azure DevOps pull requests from the command line"
 draft: false
 categories:
  - technical

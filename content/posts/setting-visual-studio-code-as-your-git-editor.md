@@ -3,6 +3,7 @@ type: post
 title: "Setting Visual Studio Code As Your Git Editor"
 date: 2020-01-22T07:17:34Z
 draft: false
+description: "Do you use VS Code as your editor? Make life easy on yourself for git operations by making it your git editor, too"
 categories:
  - technical
  - tips-and-tricks

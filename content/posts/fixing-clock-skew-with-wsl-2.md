@@ -3,6 +3,7 @@ type: post
 title: "Fixing Clock Skew with WSL 2"
 date: 2020-04-23T21:27:16+0100
 lastMod:  2020-04-24T07:16:20+0100
+description: "Getting errors because your WSL 2 clock is out of sync? FOllow these steps to automatically sync it"
 draft: false
 categories:
  - technical
