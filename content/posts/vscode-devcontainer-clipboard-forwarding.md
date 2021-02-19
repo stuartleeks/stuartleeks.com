@@ -2,6 +2,7 @@
 type: post
 title: "Forwarding copy to clipboard from dev container to Windows Host"
 date: 2021-02-17T19:11:12Z
+description: "Learn how to automatically forward content copied to the clipboard in a VS Code dev container to your Windows clipboard"
 draft: false
 categories:
  - technical
