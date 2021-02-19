@@ -19,6 +19,9 @@ googleAnalytics = "XXX"
   azureSearchInstance = "stuartleekscom"
   azureSearchIndex = "azureblob-index"
   azureSearchResults = 25
+
+  image="images/stuart-leeks-small.jpg"
+  share_img="images/stuart-leeks-small.jpg"
   
   ######################################
   # Headings Anchor
