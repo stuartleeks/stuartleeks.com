@@ -36,6 +36,10 @@ Contributed the initial work to enable devcontainers to work with source code in
 
 I've made a few contributions to the [`azurerm` provider for Terraform](https://github.com/terraform-providers/terraform-provider-azurerm/) improving support for Azure Batch, Azure Storage, Application Insights, and setting ACLs in Azure Data Lake.
 
+### Terraform operator bridge
+
+Another fun project from Lawrence Gripper, [tfoperatorbridge](https://github.com/lawrencegripper/tfoperatorbridge) allows you to create a Kubernetes operator from a Terraform provider. I enjoyed kicking around initial ideas for this with Lawrence, as well as adding integration tests and an initial implementation of referencing properties across objects.
+
 ### Azure Resource Explorer - a site to explore and manage your ARM resources in style
 
 The code for <https://resources.azure.com> lives at <https://github.com/projectkudu/AzureResourceExplorer> and I've made a few contributions there to add and update API sets.
