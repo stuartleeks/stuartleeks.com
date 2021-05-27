@@ -12,6 +12,10 @@
 	"mounts": [
 		// Keep command history 
 		"source=stuartleekscom-bashhistory,target=/home/vscode/commandhistory",
+		// Mounts the .config/gh host folder into the dev container to pick up host gh CLI login details
+		// NOTE that mounting directly to ~/.config/gh makes ~/.config only root-writable
+		// Instead monut to another location and symlink in Dockerfile
+		"type=bind,source=${env:HOME}${env:USERPROFILE}/.config/gh,target=/config/gh",
 	],
 
 	// Add the IDs of extensions you want installed when the container is created.

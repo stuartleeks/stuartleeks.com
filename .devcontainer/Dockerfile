@@ -45,3 +45,10 @@ RUN sudo dpkg -i hugo_extended_0.68.3_Linux-64bit.deb
 #    && rm -rf /var/lib/apt/lists/*
 # ENV DEBIAN_FRONTEND=dialog
 
+
+# gh
+COPY scripts/gh.sh /tmp/
+RUN /tmp/gh.sh
+
+# symlink gh config folder
+RUN echo 'ln -s /config/gh /home/vscode/.config/gh ' >> ~/.bashrc
