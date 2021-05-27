@@ -117,4 +117,4 @@ In the [source code on GitHub](https://github.com/stuartleeks/wsl-clock), I've c
 If you want to give it a spin (please note that this is not a supported workaround!) then head to the [GitHub repo](https://github.com/stuartleeks/wsl-clock) to clone it and run the install script!
 
 
-P.S. If you liked this, you may also like my book "WSL 2: Tips, Tricks and Techniques" which covers tips for working with WSL 2, Windows Terminal, VS Code dev containers and more <https://wsl.tips/book> :-)
+*P.S. If you liked this, you may also like my book "WSL 2: Tips, Tricks and Techniques" which covers tips for working with WSL 2, Windows Terminal, VS Code dev containers and more <https://wsl.tips/book> :-)*
