@@ -19,8 +19,15 @@
   {{- $title := printf "Overview of all pages with the %s #%s" .Data.Singular $.Title }}
   {{- $.Scratch.Set "Title" $title }}
 {{- else }}
+  {{- if .Params.subtitle }}
+    {{- $.Scratch.Set "TitleSuffix" (print " - " .Params.subtitle )}}
+  {{- else}}
+    {{- $.Scratch.Set "TitleSuffix" "" }}
+  {{- end }}
   {{- $.Scratch.Set "Description" ( .Description | default .Params.subtitle | default .Summary ) }}
   {{- $.Scratch.Set "Title" ( .Title | default .Site.Title ) }}
+  {{- $title := printf "%s%s" ( .Title | default .Site.Title) ($.Scratch.Get "TitleSuffix") }}
+  {{- $.Scratch.Set "Title" $title }}
 {{- end }}
 
   <meta charset="utf-8" />
