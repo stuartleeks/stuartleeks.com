@@ -1,0 +1,4 @@
+<img 
+{{ with .Get "src" }}src="{{ . }}"{{ end }}
+{{ with .Get "alt" }}alt="{{ . }}"{{ else }}alt=""{{ end }}
+>
