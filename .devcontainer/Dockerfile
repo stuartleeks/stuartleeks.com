@@ -1,17 +1,36 @@
-#-------------------------------------------------------------------------------------------------------------
-# Copyright (c) Microsoft Corporation. All rights reserved.
-# Licensed under the MIT License. See https://go.microsoft.com/fwlink/?linkid=2090316 for license information.
-#-------------------------------------------------------------------------------------------------------------
+# [Choice] Debian / Ubuntu version: debian-10, debian-9, ubuntu-20.04, ubuntu-18.04
+# See https://github.com/microsoft/vscode-dev-containers/tree/master/containers/debian
+ARG VARIANT=debian-10
+FROM mcr.microsoft.com/vscode/devcontainers/base:${VARIANT}
 
-# To fully customize the contents of this image, use the following Dockerfile instead:
-# https://github.com/microsoft/vscode-dev-containers/tree/v0.110.0/containers/ubuntu-18.04-git/.devcontainer/Dockerfile
-FROM mcr.microsoft.com/vscode/devcontainers/base:0-ubuntu-18.04
+
+# This Dockerfile adds a non-root user with sudo access. Use the "remoteUser"
+# property in devcontainer.json to use it. On Linux, the container user's GID/UIDs
+# will be updated to match your local UID/GID (when using the dockerFile property).
+# See https://aka.ms/vscode-remote/containers/non-root-user for details.
+ARG USERNAME=vscode
+ARG USER_UID=1000
+ARG USER_GID=$USER_UID
+
+# Create the user
+RUN \
+    # groupadd --gid $USER_GID $USERNAME \
+    # && useradd --uid $USER_UID --gid $USER_GID -m $USERNAME \
+    apt-get update \
+    && apt-get install -y sudo \
+    && echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
+    && chmod 0440 /etc/sudoers.d/$USERNAME
+
+# Set default user
+USER $USERNAME
+
+
 
 # RUN sudo apt update \
 #     && sudo apt install snapd
 # RUN sudo snap install hugo --channel=extended
 
-RUN wget https://github.com/gohugoio/hugo/releases/download/v0.68.3/hugo_extended_0.68.3_Linux-64bit.deb
+RUN sudo wget https://github.com/gohugoio/hugo/releases/download/v0.68.3/hugo_extended_0.68.3_Linux-64bit.deb
 RUN sudo dpkg -i hugo_extended_0.68.3_Linux-64bit.deb
 
 # ** [Optional] Uncomment this section to install additional packages. **
