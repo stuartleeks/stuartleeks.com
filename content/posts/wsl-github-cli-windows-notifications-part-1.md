@@ -1,7 +1,7 @@
 ---
 type: post
 title: "Fun with WSL, GitHub CLI and Windows Notifications"
-subtitle: "Part 1: wsl-notify-send"
+subtitle: "Part 1: wsl-notify-send as a replacement for notify-send"
 date: 2021-05-27T07:10:16+0100
 lastMod:  2021-05-27T07:10:16+0100
 pageSummary: See how to create a replacement notify-send utility for WSL, and how to integrate that with the GitHub cli to get Windows notifications when your GitHub workflows finish
@@ -61,6 +61,6 @@ And here you can see `--category` specified and overriding the default:
 
 Whichever option you go with, you can now run scripts that use `notify-send` without needing to make updates! 
 
-In the next post we'll take a look at what we can do by making some tweaks to `ghrun` to integrate other features of Windows notifications...
+In the [next post]({{< relref "wsl-github-cli-windows-notifications-part-2/index.md" >}}) we'll take a look at what we can do by making some tweaks to `ghrun` to integrate other features of Windows notifications...
 
 *P.S. If you liked this, you may also like my book "WSL 2: Tips, Tricks and Techniques" which covers tips for working with WSL 2, Windows Terminal, VS Code dev containers and more <https://wsl.tips/book> :-)*
