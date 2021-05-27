@@ -127,4 +127,4 @@ In some of the projects I've referenced through this post you may see the `.gitc
 
 I plan to come back to edit this post as I learn new/better ways of working with devcontainers (and as devcontainers continue to evolve), but hopefully the ideas here help you get started. For me, using devcontainers has been a really positive experience overall and has smoothed the process of transitioning from repo to repo!
 
-P.S. If you liked this, you may also like my book "WSL 2: Tips, Tricks and Techniques" which covers tips for working with WSL 2, Windows Terminal, VS Code dev containers and more <https://wsl.tips/book> :-)
+*P.S. If you liked this, you may also like my book "WSL 2: Tips, Tricks and Techniques" which covers tips for working with WSL 2, Windows Terminal, VS Code dev containers and more <https://wsl.tips/book> :-)*

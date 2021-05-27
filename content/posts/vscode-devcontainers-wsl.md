@@ -68,4 +68,4 @@ Whilst it is currently early days for the WSL/devcontainers integration, I'm exc
 It's early days, but I'm excited to see where this goes 😁.
 
 
-P.S. If you liked this, you may also like my book "WSL 2: Tips, Tricks and Techniques" which covers tips for working with WSL 2, Windows Terminal, VS Code dev containers and more <https://wsl.tips/book> :-)
+*P.S. If you liked this, you may also like my book "WSL 2: Tips, Tricks and Techniques" which covers tips for working with WSL 2, Windows Terminal, VS Code dev containers and more <https://wsl.tips/book> :-)*

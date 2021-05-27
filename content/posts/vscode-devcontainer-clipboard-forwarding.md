@@ -2,6 +2,7 @@
 type: post
 title: "Forwarding copy to clipboard from dev container to Windows Host"
 date: 2021-02-17T19:11:12Z
+pageSummary: "Make magic happen! Learn how to automatically forward content copied to the clipboard in a VS Code dev container to your Windows clipboard"
 description: "Learn how to automatically forward content copied to the clipboard in a VS Code dev container to your Windows clipboard"
 draft: false
 categories:
@@ -182,4 +183,4 @@ If you are configuring via the VS Code "Prefernces: Open Settings (JSON)" comman
 That's all for this time! I hope you found it useful and/or interesting, whether as a solution or as a starting point. This solution works well for me, but take it and customise it to suit you. Or just take the techniques and use them for something altogether different 😃.
 
 
-P.S. If you liked this, you may also like my book "WSL 2: Tips, Tricks and Techniques" which covers tips for working with WSL 2, Windows Terminal, VS Code dev containers and more <https://wsl.tips/book> :-)
+*P.S. If you liked this, you may also like my book "WSL 2: Tips, Tricks and Techniques" which covers tips for working with WSL 2, Windows Terminal, VS Code dev containers and more <https://wsl.tips/book> :-)*
