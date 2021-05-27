@@ -70,7 +70,7 @@ else
     title="Run completed with exit code $exit_code"
 fi
 
-toast \
+toast.exe \
     --app-id "GitHub" \
     --title "$title" \
     --message "$PWD" 
@@ -166,7 +166,7 @@ else
     title="Run completed with exit code $exit_code"
 fi
 
-toast \
+toast.exe \
     --app-id "GitHub" \
     --title "$title" \
     --message "$PWD" \
@@ -186,8 +186,7 @@ And with that, we're done! The script can definitely be simplified once [`gh run
 If you want to get started with the `ghrun` alias:
 
 - Grab the scripts from [this gist](https://gist.github.com/stuartleeks/1d579f042fac3a4cdb6663ca10dc97de)
-- Download `toast.exe` from https://github.com/stuartleeks/toast/releases/latest
-- Add an alias `alias toast=toast.exe` to your `.bashrc` (include the `/mnt/c/...` path if not in your Windows PATH)
+- Download `toast.exe` from https://github.com/stuartleeks/toast/releases/latest and place in your Windows `PATH`
 - Save `ghrun.sh` and `save-args.sh` to your system and make executable (`chmod +x ghrun.sh` etc)
 - Add an alias `alias ghrun=/path/to/ghrun.sh`
 
