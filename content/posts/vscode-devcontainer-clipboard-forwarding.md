@@ -10,7 +10,7 @@ categories:
  - tips-and-tricks
 tags:
  - wsl
- - devcontainers
+ - dev-containers
  - tips-and-tricks
 ---
 

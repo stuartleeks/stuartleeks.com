@@ -28,9 +28,9 @@ I've [contributed various PRs](https://github.com/lawrencegripper/azbrowse/pulls
    - Cosmos DB (SQL Database endpoint)
    - Databricks (allows drill-down into the Databricks API) 
 
-### VS Code Remote Containers (aka devcontainers)
+### VS Code Remote Containers (aka dev containers)
 
-Contributed the initial work to enable devcontainers to work with source code in WSL 2: https://github.com/microsoft/vscode-docs/blob/master/remote-release-notes/v1_44.md#progress-on-wsl-and-wsl-2-support
+Contributed the initial work to enable dev containers to work with source code in WSL 2: https://github.com/microsoft/vscode-docs/blob/master/remote-release-notes/v1_44.md#progress-on-wsl-and-wsl-2-support
 
 ### Terraform `azurerm` provider
 
@@ -70,11 +70,11 @@ After tracking this down to something that only seems to happen after sleep/hibe
 
 I'm [quite a big fan](https://stuartleeks.com/posts/vscode-devcontainers/) of the [dev containers feature of VS Code](https://code.visualstudio.com/docs/remote/containers) (especially [with WSL 2](#vs-code-remote-containers-aka-devcontainers)) and included a whole chapter on them in [my WSL 2 book](https://wsl.tips/book).
 
-I also spend quite a bit of time working in the Terminal, so created a [`devcontainer` CLI](https://github.com/stuartleeks/devcontainer-cli). This CLI allows you to:
+I also spend quite a bit of time working in the Terminal, so created a [`dev container` CLI](https://github.com/stuartleeks/devcontainer-cli). This CLI allows you to:
 
  - `devcontainer open-in-code` to open a folder in VS Code as a dev container (skipping the normal interim step where VS Code prompts you to reload as a dev container)
  - `devcontainer exec` to `exec` into a dev container (analagous to `docker exec`) - useful for dropping your terminal session into a dev container
- - `devcontainer template add` to copy a template dev container into your project to create a devcontainer - a handy way to get started
+ - `devcontainer template add` to copy a template dev container into your project to create a dev container - a handy way to get started
  - `devcontainer template add-link` to symlink a dev container template into your project with a `.gitignore` to exclude the folder - useful if you want to work with a dev container on a project that doesn't want the dev container contributed 
 
 ### az group deployment watch - Azure CLI extension
