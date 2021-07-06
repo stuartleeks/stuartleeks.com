@@ -25,7 +25,7 @@ Fear not! This can be configured in the Windows Terminal settings. Fire up Windo
 1. The path needs to be a Windows path - so for your `HOME` folder in WSL you need to use the `\\wsl$\...` file share
 1. Backslashes need to be escaped, so this becomes `\\\\wsl$\\...`
 
-To make it easy to get this path you can run the following command from your distro. This will convert the WSL `HOME` folder path to `\\wsl$\...` form, escape the backslashes and then pop the result on the clipboard ready for you to paste into your 
+To make it easy to get this path you can run the following command from your distro. This will convert the WSL `HOME` folder path to `\\wsl$\...` form, escape the backslashes and then pop the result on the clipboard ready for you to paste into your terminal settings. This uses the handy `wslpath` tool from the [WSL Utilities](https://wslutiliti.es/) collection by [Patrick Wu](https://twitter.com/callmepkwu).
 
 
 ```bash
