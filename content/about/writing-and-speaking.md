@@ -50,7 +50,7 @@ Gave a lightning talk on WSL 2 (Windows Subsystem for Linux version 2) and the i
 
 ### May 2019 - Microsoft Build Conference - From dev to production: Container lifecycle, monitoring, logging and troubleshooting
 
-I was thrilled to be invited to present at the Microsoft Build conference in Seattle.
+I was thrilled to be invited to [present](https://www.youtube.com/watch?v=oEGZIH4N3HA) at the Microsoft Build 2019 conference in Seattle.
 
 Abstract: As developers push intellectual property to registries, how will you secure and protect that IP? Additionally, how do you ensure that once those applications are deployed they properly running and in good shape? In this session we'll cover building container images, image scanning, signing and promotion across environments. Then we will look at the tools and knowledge you need to keep your containerized applications healthy and how to detect when something goes wrong.
 
