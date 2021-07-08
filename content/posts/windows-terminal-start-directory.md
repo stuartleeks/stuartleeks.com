@@ -35,7 +35,7 @@ wslpath -w ~ | sed 's/\\/\\\\/g' | clip.exe
 
 Here's an example of the finished result:
 
-```json
+```jsonc
 "profiles": {
     "defaults": {
         // Put settings here that you want to apply to all profiles.
