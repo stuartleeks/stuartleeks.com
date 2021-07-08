@@ -25,8 +25,8 @@ The remainder of this post will call out some cool features of devc ontainers an
 
 Links to sections:
 
-* [Dev containers for CI builds](#devcontainers-for-ci-builds)
-* [What should go in the dev container?](#what-should-go-in-the-devcontainer)
+* [Dev containers for CI builds](#dev-containers-for-ci-builds)
+* [What should go in the dev container?](#what-should-go-in-the-dev-container)
 * [postCreateCommand (e.g. for package install)](#postcreatecommand-eg-for-package-install)
 * [Pin your tool versions](#pin-your-tool-versions)
 * [Using volumes](#using-volumes)
