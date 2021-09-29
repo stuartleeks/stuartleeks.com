@@ -60,12 +60,6 @@ I [contributed a number of PRs](https://github.com/mortenn/BrowserPicker/pulls?q
 
 ## My Projects
 
-### wsl-clock - automatically correct clock drift
-
-There has been a [long-running issue](https://github.com/microsoft/WSL/issues/4245) (now tracked [here](https://github.com/microsoft/WSL/issues/5324)) with WSL 2 where the clock in WSL 2 ends up behind the main system time. This causes a wide range of issues (for example, access tokens may be issued that the system doesn't think are valid).
-
-After tracking this down to something that only seems to happen after sleep/hibernation, I created a PowerShell script that is triggered on system resume and automates applying the step to correct the clock. I later updated this to be a command line app written in Go - see [https://github.com/stuartleeks/wsl-clock](https://github.com/stuartleeks/wsl-clock).
-
 ### Dev container CLI
 
 I'm [quite a big fan](https://stuartleeks.com/posts/vscode-devcontainers/) of the [dev containers feature of VS Code](https://code.visualstudio.com/docs/remote/containers) (especially [with WSL 2](#vs-code-remote-containers-aka-devcontainers)) and included a whole chapter on them in [my WSL 2 book](https://wsl.tips/book).
@@ -76,6 +70,18 @@ I also spend quite a bit of time working in the Terminal, so created a [`dev con
  - `devcontainer exec` to `exec` into a dev container (analagous to `docker exec`) - useful for dropping your terminal session into a dev container
  - `devcontainer template add` to copy a template dev container into your project to create a dev container - a handy way to get started
  - `devcontainer template add-link` to symlink a dev container template into your project with a `.gitignore` to exclude the folder - useful if you want to work with a dev container on a project that doesn't want the dev container contributed 
+
+### devcontainer-build-run - GitHub action and Azure DevOps task for using dev containers in CI/CD
+
+This project provides both a GitHub action and an Azure DevOps task with the goal of making it easier to re-use your VS Code dev container definition in you GitHub and Azure DevOps pipelines. By doing this, your CI builds use the same environment that you use for local development, extending the benefits of dev containers to your CI pipelines.
+
+Code at: <https://github.com/stuartleeks/devcontainer-build-run>
+
+### wsl-clock - automatically correct clock drift
+
+There has been a [long-running issue](https://github.com/microsoft/WSL/issues/4245) (now tracked [here](https://github.com/microsoft/WSL/issues/5324)) with WSL 2 where the clock in WSL 2 ends up behind the main system time. This causes a wide range of issues (for example, access tokens may be issued that the system doesn't think are valid).
+
+After tracking this down to something that only seems to happen after sleep/hibernation, I created a PowerShell script that is triggered on system resume and automates applying the step to correct the clock. I later updated this to be a command line app written in Go - see [https://github.com/stuartleeks/wsl-clock](https://github.com/stuartleeks/wsl-clock).
 
 ### az group deployment watch - Azure CLI extension
 
