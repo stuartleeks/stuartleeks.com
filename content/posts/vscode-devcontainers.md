@@ -47,6 +47,8 @@ One thing to consider is that your build times may increase due to building the 
 * the [azure-databricks-operator build definition](https://github.com/microsoft/azure-databricks-operator/blob/29885158c2d2d2bc003b9beaa0dec40823b3af4f/azure-pipelines.yaml) uses [Azure DevOps Pipelines](https://docs.microsoft.com/en-us/azure/devops/pipelines/?view=azure-devops) and uses the [Cache Task](https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/utility/cache?view=azure-devops) to cache the docker image between builds.
 * in [azbrowse](https://github.com/lawrencegripper/azbrowse/blob/dd441349488cf7ba91452012781be5dccc8c9548/Makefile#L130) the `Makefile` performs a `docker pull` to pull a previous image to help speed up the build
 
+UPDATE: if you're using GitHub Actions or Azure DevOps Pipelines, check out this [action/task for working with dev containers in CI](https://github.com/stuartleeks/devcontainer-build-run)
+
 By using the dev container in your build pipeline any dependency that you add to your development environment is automatically added to your build pipeline :-)
 
 ## What should go in the dev container?
