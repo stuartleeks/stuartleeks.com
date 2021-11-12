@@ -77,7 +77,7 @@ In short, pin your tool versions (as [shown here](https://github.com/microsoft/a
 
 As discussed above, my feeling is that packages should live outside the dev container image. This means that you end up pulling the packages each time you build. To avoid that you can mount a volume so that the location that packages are cached in is persisted across container instances. The exact folder will vary by language but [here's an example](https://github.com/microsoft/k8s-cronjob-prescaler/blob/ed87743e370a0e4bfdf6e7d4fbb4c40bd915d0f7/.devcontainer/devcontainer.json#L7) of mounting a volume for the `/go/pkg` folder for golang packages in the Kubernetes CronJob Pre-scaler project.
 
-Another great reason to mount a volue is to [preserve bash command history](https://code.visualstudio.com/docs/remote/containers-advanced#_persist-bash-history-between-runs) across sessions. By scoping the volume name to include the project name you end up with command history scoped to the project which is a very nice side effect!
+Another great reason to mount a volume is to [preserve bash command history](https://code.visualstudio.com/docs/remote/containers-advanced#_persist-bash-history-between-runs) across sessions. By scoping the volume name to include the project name you end up with command history scoped to the project which is a very nice side effect!
 
 ### Share data from the host
 
