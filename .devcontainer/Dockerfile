@@ -52,3 +52,6 @@ RUN /tmp/gh.sh
 
 # symlink gh config folder
 RUN echo 'ln -s /config/gh /home/vscode/.config/gh ' >> ~/.bashrc
+
+
+RUN sudo apt install -y make
