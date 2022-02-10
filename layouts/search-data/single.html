@@ -1,0 +1,40 @@
+{{ $.Scratch.Add "index" slice }}
+
+{{/* SL TODO - validate that excludeFromSearch is working */}}
+
+{{ $searchablePages := where .Site.Pages "Params.excludeFromSearch" "!=" "true" }}
+
+{{/*  {{ $searchablePages := .Site.Pages }}  */}}
+
+{{ range $index, $page := $searchablePages }}
+  {{ .Scratch.Set "pageData" "" }}
+  {{ .Scratch.Set "pageContent" "" }}
+  {{ .Scratch.Set "pageURL" "" }}
+  {{ .Scratch.Set "pageTag" "" }}
+  {{ .Scratch.Set "pageType" "" }}
+
+
+  {{ if gt (len $page.Content) 0 }}
+    {{ .Scratch.Set "pageContent" $page.Plain }}
+    {{ .Scratch.Set "pageURL" $page.Permalink }}
+    {{ if (isset $page.Params "tags") }}
+    {{ .Scratch.Set "pageTag" (delimit $page.Params.tags " ; ") }}
+    {{ end }}
+
+    {{ if eq $page.Type "blog" }}
+      {{ .Scratch.Set "pageType" "article" }}
+    {{ end}}
+    {{ if eq $page.Type "offering" }}
+      {{ .Scratch.Set "pageType" "offering" }}
+    {{ end}}
+    {{ if eq (.Scratch.Get "pageType") "" }}
+      {{ .Scratch.Set "pageType" "other" }}
+    {{ end}}
+
+    {{ .Scratch.Set "pageData" (dict "id" $index "title" $page.Title "url" (.Scratch.Get "pageURL") "content" (.Scratch.Get "pageContent") "tag" (.Scratch.Get "pageTag") "type" (.Scratch.Get "pageType") "date_published" (.Date.Format "2006-01-02T15:04:05Z07:00") "date_published_display" (.Date.Format "Monday, 2 January, 2006 15:04") ) }}
+
+    {{ $.Scratch.Add "index" (.Scratch.Get "pageData") }}
+  {{ end }}
+{{ end }}
+
+{{ $.Scratch.Get "index" | jsonify }}

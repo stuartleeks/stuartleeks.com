@@ -3,6 +3,7 @@ title: "About the theme"
 date: 2020-01-05T13:31:05Z
 draft: false
 type: page
+excludeFromSearch: true
 ---
 
 This blog is generated with [Hugo](https://gohugo.io/).

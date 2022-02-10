@@ -1004,3 +1004,11 @@ ul.share li:hover .fab {
         margin-top: -70px;
     }
 }
+
+mark {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: .2em;
+    padding-right: .2em;
+    background-color: #fff3b2;
+}

@@ -31,7 +31,7 @@ jobs:
         uses: stuartleeks/devcontainer-build-run@v0.1
         with:
           imageName: ghcr.io/stuartleeks/stuartleeks-com-devcontainer
-          runCmd: make build
+          runCmd: make ci-build
 
        # https://docs.microsoft.com/en-gb/azure/static-web-apps/build-configuration?tabs=github-actions#build-configuration
       - name: Deploy
@@ -43,6 +43,6 @@ jobs:
           ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
           # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
           app_location: "public"
-          skip_app_build: true
+          skip_app_build: true # The content is built in the dev container step - using this action to publish
           ###### End of Repository/Build Configurations ######
 

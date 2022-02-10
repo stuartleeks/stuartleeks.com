@@ -1,0 +1,190 @@
+---
+title: "Search stuartleeks.com"
+draft: false
+layout: search
+---
+
+
+<div class="posts-list" id="search-results">
+	Searching...
+</div>
+<script src="https://stuartleeks.com/js/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.1.0/mustache.min.js"></script>
+<script id="search-results-template" type="x-tmpl-mustache">
+    {{#value}}
+    <article class="post-preview">
+    <a href="{{ url }}">
+        <h2 class="post-title">{{{ title }}}</h2>
+    </a>
+    <span class="post-meta">
+        <i class="fas fa-calendar"></i>&nbsp;{{ date_published_display }} <!-- TODO - get author from result-->&nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp; Stuart Leeks
+    </span>
+    <div class="post-entry">
+        {{{ description }}}
+    </div>
+    <div class="blog-tags">
+        {{#tags}}<a href="/tags/{{ name }}/">{{{ display }}}</a>&nbsp;{{/tags}}
+    </div>
+    </article>
+    {{/value}}
+</script>
+<!-- TODO show tag facets -->
+
+<script src="https://unpkg.com/lunr/lunr.js"></script>
+
+<script>
+	// TODO - add search term completion
+
+	// TODO -  look at pre-building the lunr index: https://lunrjs.com/guides/index_prebuilding.html
+	(function () {
+		var template = document.getElementById("search-results-template").innerHTML;
+		Mustache.parse(template);
+
+		const tags = (tags, searchString) => {
+			let tagHTML = (tags.split(" ; ") || [])
+				.filter(i => {
+					return i && i.length > 0;
+				})
+				.map(i => {
+					return "<span class='tag'>" + mark(i, searchString) + "</span>";
+				})
+			return tagHTML.join("");
+		}
+		const mark = (content, search) => {
+			if (!content) {
+				return content;
+			}
+
+			if (search) {
+				let pattern = /^[a-zA-Z0-9]*:/i;
+				search.split(" ").forEach(s => {
+					if (pattern.test(s)) {
+						s = s.replace(pattern, "");
+					}
+
+					if (s && s.startsWith("+")) {
+						s = s.substring(1);
+					}
+
+					if (s && s.indexOf("~") > 0
+						&& s.length > s.indexOf("~")
+						&& parseInt(s.substring(s.indexOf("~") + 1)) == s.substring(s.indexOf("~") + 1)
+					) {
+						s = s.substring(0, s.indexOf("~"));
+					}
+
+					if (!s || s.startsWith("-")) {
+						return;
+					}
+					let re = new RegExp(s, "i");
+					content = content.replace(re, m => {
+						return "<mark>" + m + "</mark>";
+					});
+				});
+			}
+
+			return content;
+		}
+
+		const getMatchedSnippet = (content, search, matchStart) => {
+			const snippetLength = 300
+			if (content.length < snippetLength) {
+				return content;
+			}
+			var snippetStart = matchStart - (snippetLength / 2); // position roughly in the middle
+			if (snippetStart + snippetLength > content.length) {
+				snippetStart = content.length - snippetLength
+			}
+			if (snippetStart < 0) {
+				snippetStart = 0;
+			}
+
+
+			var snippet = content.substring(snippetStart, snippetStart + snippetLength);
+			if (snippetStart > 0) {
+				snippet = "..." + snippet;
+			}
+			if (snippetStart + snippetLength < content.length) {
+				snippet = snippet + "...";
+			}
+			return snippet
+		}
+
+
+		document.addEventListener("DOMContentLoaded", () => {
+			const searchForm = document.getElementById("search-form");
+			const searchTextbox = document.getElementsByName("search")[0];
+			const searchResultsParent = document.getElementById("search-results");
+
+			const searchParam = window.location.search.slice(1).split("&").map(s => s.split("=")).find(s => s[0] === "search")
+			if (searchParam && searchParam[1]) {
+				searchTextbox.value = decodeURIComponent(searchParam[1].replaceAll("+", " ")); // handle "foo +bar baz" as original search value
+			}
+
+			var searchIndex = null;
+			var searchContent = null;
+
+			function doSearch(searchText) {
+				if (searchIndex === null) {
+					return;
+				}
+
+				const searchResults = searchIndex.search(searchText);
+
+				if (searchResults.length > 0) {
+					const matchData = searchResults.map(match => {
+						let item = searchContent.find(el => {
+							return el.id == parseInt(match.ref);
+						});
+						const firstMatchPosition = match.matchData.metadata[searchText]?.content?.position[0]; // Default to start if searchText not found (refine later)
+						const tags = item.tag ? (item.tag.split(" ; ").map(t => { return { name: t, display: mark(t, searchText)} } )) : [];
+						return {
+							title: mark(item.title, searchText),
+							tags: tags,
+							url: item.url,
+							date_published_display: item.date_published_display,
+							description: mark(getMatchedSnippet(item.content, searchText, firstMatchPosition ? firstMatchPosition[0] : 0), searchText),
+						};
+					});
+					searchResultsParent.innerHTML = Mustache.render(template, { value: matchData });
+				} else {
+					searchResultsParent.innerHTML = "<li><p class='no-result'>No results found</p></li>";
+				}
+			}
+
+			fetch("/search-data/")
+				.then(response => response.json())
+				.then(r => {
+					searchContent = r;
+					searchIndex = lunr(b => {
+						b.ref("id");
+						b.field("title");
+						b.field("content");
+						b.field("tag");
+						b.field("url");
+						b.field("type");
+						b.metadataWhitelist = ['position'];
+
+						Array.from(searchContent).forEach(doc => {
+							b.add(doc)
+						}, b);
+					});
+
+					if (searchTextbox.value !== "") {
+						doSearch(searchTextbox.value);
+					}
+				});
+		});
+	})();
+</script>
+
+<style>
+	#search-results {
+		padding-top: 2rem;
+	}
+
+	#search-results li {
+		padding-top: 1rem;
+		list-style: none;
+	}
+</style>
