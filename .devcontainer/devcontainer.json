@@ -1,7 +1,7 @@
 // For format details, see https://aka.ms/vscode-remote/devcontainer.json or this file's README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.110.0/containers/ubuntu-18.04-git
 {
-	"name": "Ubuntu 18.04 & Git",
+	"name": "stuartleeks.com",
 	"dockerFile": "Dockerfile",
 
 	// Set *default* container specific settings.json values on container create.
