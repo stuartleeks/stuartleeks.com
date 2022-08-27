@@ -21,7 +21,7 @@ My team has been using dev containers quite heavily for the last few months and 
 
 Our recent project had several code repos and dev containers really helped when we were switching between repos as once the dev container is built and running you have all the tools you need - there's no list of pre-requisites that you need to check to ensure you have all the required tools (and versions). This helps to ensure that all developers are using the same toolset.
 
-The remainder of this post will call out some cool features of devc ontainers and my current (and totally subject to change) thoughts on working with them! The good ideas in this post are a credit to the team, but this post is a summary of *my* thoughts on dev containers so if there's anything you disagree with assume that it's my idea :-)
+The remainder of this post will call out some cool features of dev containers and my current (and totally subject to change) thoughts on working with them! The good ideas in this post are a credit to the team, but this post is a summary of *my* thoughts on dev containers so if there's anything you disagree with assume that it's my idea :-)
 
 Links to sections:
 
