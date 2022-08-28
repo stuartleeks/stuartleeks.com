@@ -37,7 +37,7 @@ I eventually got some time to play around with addressing that niggle, and in th
 
 My first thought was to create an alias for each tool installed and have the alias point to a `wrapper.sh`.
 The `wrapper.sh` script took the tool/command as the first argument and then remaining arguments that should be passed to the command.
-When run, the script output a warning message and then called on to the tool.
+When run, the script outputs a warning message and then calls on to the real tool.
 
 ```bash
 # wrapper.sh
@@ -50,7 +50,7 @@ $tool_command $@
 With the script in place, I created an alias. For example, to wrap the `jq` command, I used the following: `alias jq=~/dotfiles/wrapper.sh jq`. Any additional arguments passed to the `jq` alias are passed to the wrapper script which passes them on to the real `jq`.
 
 Having hacked this together, I gave it a test from my bash prompt and it worked - the script output a warning and then called `jq` passing the extra arguments along.
-With hindsight, the fact that the script worked aat this point _might_ have started alarm bells ringing, but we'll come back to that shortly.
+With hindsight, the fact that the script worked at this point _might_ have started alarm bells ringing, but we'll come back to that shortly.
 
 My next test was to create a bash script that called `jq` and test that the wrapper approach still worked there.
 
