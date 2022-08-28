@@ -24,7 +24,7 @@ I find that this feature allows me to make the experience in the dev container f
 For example, I started out on a [BBC micro model B](https://en.wikipedia.org/wiki/BBC_Micro) (and then DOS) where `cls` was the command to clear the screen and that muscle memory means that typing `clear` still requires concentration, so I have an alias for `cls`.
 
 Along with my aliases, I also install a few tools that I generally like to have around, such as `jq` and `dig`.
-Installing these tools is useful for times when I'm poking around on something trying to debug it, but it's also the source of the potential problem: if these tools aren't specified in the dev container them only I will have them available to me.
+Installing these tools is useful for times when I'm poking around on something trying to debug it, but it's also the source of the potential problem: if these tools aren't specified in the dev container then only I will have them available to me.
 So if I create a script for use in the project and make use of one of these tools then it will work for me but no-one else!
 As I commented in [another post](https://stuartleeks.com/posts/vscode-devcontainers/#dotfiles-and-user-extensions):
 
