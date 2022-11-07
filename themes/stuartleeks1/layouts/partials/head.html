@@ -94,6 +94,11 @@
     {{- end -}}
   {{- end -}}
 
+{{- if .Site.Params.mastodonLink -}}
+
+  <a rel="me" href="{{.Site.Params.mastodonLink}}">Mastodon</a>
+{{- end }}
+
 {{- partial "head_custom.html" . }}
 {{ partial "head-appinsights.html" . }}
 {{/*  {{ template "_internal/google_analytics_async.html" . }}  */}}
