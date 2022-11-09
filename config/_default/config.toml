@@ -47,8 +47,7 @@ googleAnalytics = "XXX"
 
   enableAnchorAutoHide = true
 
-  mastodonLink = "https://mastodon.online/@stuartleeks"
-
+  mastodonLink = "https://fosstodon.org/@stuartleeks"
 
 
 
