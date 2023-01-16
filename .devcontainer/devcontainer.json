@@ -3,38 +3,34 @@
 {
 	"name": "stuartleeks.com",
 	"dockerFile": "Dockerfile",
-
-	// Set *default* container specific settings.json values on container create.
-	"settings": { 
-		"terminal.integrated.shell.linux": "/bin/bash"
-	},
-
 	"mounts": [
-		// Keep command history 
-		"source=stuartleekscom-bashhistory,target=/home/vscode/commandhistory",
 		// Mounts the .config/gh host folder into the dev container to pick up host gh CLI login details
 		// NOTE that mounting directly to ~/.config/gh makes ~/.config only root-writable
-		// Instead monut to another location and symlink in Dockerfile
+		// Instead mount to another location and symlink in Dockerfile
 		"type=bind,source=${env:HOME}${env:USERPROFILE}/.config/gh,target=/config/gh",
 	],
-
-	// Add the IDs of extensions you want installed when the container is created.
-	"extensions": [
-		"bungcip.better-toml"
-	],
-
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	"forwardPorts": [1313],
-
+	"forwardPorts": [
+		1313
+	],
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "uname -a",
-
 	// Uncomment to use the Docker CLI from inside the container. See https://aka.ms/vscode-remote/samples/docker-in-docker.
 	// "mounts": [ "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind" ],
-
 	// Uncomment when using a ptrace-based debugger like C++, Go, and Rust
 	// "runArgs": [ "--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined" ],
-
 	// Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
-	"remoteUser": "vscode"
+	"remoteUser": "vscode",
+	
+	"customizations": {
+		"vscode": {
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"bungcip.better-toml"
+			]
+		}
+	},
+	"features": {
+		"ghcr.io/stuartleeks/dev-container-features/shell-history:0": {}
+	}
 }
