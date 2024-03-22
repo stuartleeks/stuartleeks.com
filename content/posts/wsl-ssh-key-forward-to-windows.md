@@ -31,7 +31,7 @@ If you just want to set up the WSL SSH forwarding then skip to the [final soluti
 
 As I mentioned, my most common usage of SSH keys day-to-day is as a way to authenticate to git remotes. This lead me to [this page in the GitHub docs](https://docs.github.com/en/developers/overview/using-ssh-agent-forwarding) which discusses SSH Agent forwarding and mentions the `SSH_AUTH_SOCK` environment variable.
 
-After some reading it turns out that `SSH_AUTH_SOCK` controls the path to the UNIX socket that is used by SSH tools to communicate with the SSH Agent. This seemed like an interesting start, and fortunately I'd previously stumbled across the [npiperelay]() from [John Starks](https://twitter.com/gigastarks). The docs and examples for `npiperelay` have some examples for using `npiperelay` with the `socat` utility as a way of forwarding Linux sockets in WSL to named pipes in Windows - sounds perfect!
+After some reading it turns out that `SSH_AUTH_SOCK` controls the path to the UNIX socket that is used by SSH tools to communicate with the SSH Agent. This seemed like an interesting start, and fortunately I'd previously stumbled across the [npiperelay](https://github.com/jstarks/npiperelay) from [John Starks](https://twitter.com/gigastarks). The docs and examples for `npiperelay` have some examples for using `npiperelay` with the `socat` utility as a way of forwarding Linux sockets in WSL to named pipes in Windows - sounds perfect!
 
 ## Get the tools
 
