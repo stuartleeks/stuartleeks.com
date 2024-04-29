@@ -27,8 +27,11 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Fixup mount folders
+        run: mkdir -p ~/.config/gh
+
       - name: Build and run dev container task
-        uses: stuartleeks/devcontainer-build-run@v0.1
+        uses: devcontainers/ci@v0.3
         with:
           imageName: ghcr.io/stuartleeks/stuartleeks-com-devcontainer
           runCmd: make ci-build
