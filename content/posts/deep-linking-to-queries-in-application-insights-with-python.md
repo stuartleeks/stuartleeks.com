@@ -20,7 +20,7 @@ I recently wanted to be able to create deep links to a specific query in Applica
 For example, you might want to share a specific query with a colleague or include a link in some system documentation.
 In these scenarios the portal has a built-in Share features that is useful:
 
- ![alt text](./deep-linking-to-queries-in-application-insights-with-python/portal-share.png "'Copy link to query' option in portal")
+ ![alt text](./portal-share.png "'Copy link to query' option in portal")
 
  This gives you a link in this form: `https://portal.azure.com#@<TENANT_ID>/blade/Microsoft_OperationsManagementSuite_Workspace/
  Logs.ReactView/resourceId/%2Fsubscriptions%2F<SUBSCRIPTION_ID>%2F
@@ -48,7 +48,7 @@ def get_simple_link(
         resource_group_name: str,
         app_insights_name: str,
         query: str,
-        time_frame: str = "P1D"
+        timespan: str = "P1D"
         ):
     # Set safe to empty string to ensure slashes are encoded
     encodedQuery = urllib.parse.quote(query, safe="")
@@ -56,7 +56,7 @@ def get_simple_link(
             f"LogsBlade/resourceId/%2Fsubscriptions%2F{subscription_id}%2FresourceGroups%2F" +
             f"{resource_group_name}%2Fproviders%2Fmicrosoft.insights%2Fcomponents%2F" +
             f"{app_insights_name}/source/LogsBlade.AnalyticsShareLinkToQuery/query/{encodedQuery}" +
-            f"/timespan/{time_frame}")
+            f"/timespan/{timespan}")
 
 ```
 
@@ -104,7 +104,7 @@ def get_compressed_link(
         resource_group_name: str,
         app_insights_name: str,
         query: str,
-        time_frame: str = "P1D"
+        timespan: str = "P1D"
 ):
     # Get the UTF8 bytes for the query
     query_bytes = query.encode('utf-8')
@@ -125,7 +125,7 @@ def get_compressed_link(
             f"LogsBlade/resourceId/%2Fsubscriptions%2F{subscription_id}%2FresourceGroups%2F" + 
             f"{resource_group_name}%2Fproviders%2Fmicrosoft.insights%2Fcomponents%2F" + 
             f"{app_insights_name}/source/LogsBlade.AnalyticsShareLinkToQuery/q/{encodedQuery}"+
-            f"/timespan/{time_frame}")
+            f"/timespan/{timespan}")
 ```
 
 We can call this function in the same way as the previous one:
