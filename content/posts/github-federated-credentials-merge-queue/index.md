@@ -12,6 +12,8 @@ tags:
  - azure-entra-id
 ---
 
+> Huge thanks to [Mani](https://www.linkedin.com/in/maninderjitbindra/) for how to get this working!
+
 ## Introduction
 
 I often have GitHub workflows that deploy resources to Azure.

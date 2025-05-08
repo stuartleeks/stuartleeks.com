@@ -26,8 +26,12 @@
 		"vscode": {
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
-				"bungcip.better-toml"
-			]
+				"bungcip.better-toml",
+				"stuartleeks.vscode-hugo-runner"
+			],
+			"settings": {
+				"hugo-runner.hugoExecutablePath": "/usr/local/bin/hugo"
+			}
 		}
 	},
 	"features": {
