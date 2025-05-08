@@ -51,13 +51,13 @@ googleAnalytics = "XXX"
 
 
 
-[Author]
-  name = "Stuart Leeks"
-  website = "https://stuartleeks.com"
-  github = "stuartleeks"
-  twitter = "stuartleeks"
-  linkedin = "stuartleeks"
-  stackoverflow = "users/202415/stuart-leeks"
+  [Params.Author]
+    name = "Stuart Leeks"
+    website = "https://stuartleeks.com"
+    github = "stuartleeks"
+    twitter = "stuartleeks"
+    linkedin = "stuartleeks"
+    stackoverflow = "users/202415/stuart-leeks"
 
 
 [[menu.main]]
