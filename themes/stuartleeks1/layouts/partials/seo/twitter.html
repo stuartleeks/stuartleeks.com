@@ -9,7 +9,7 @@
   <meta name="og:image" content="{{ . | absURL }}" />
 {{- end }}
   <meta name="twitter:card" content="summary" />
-{{- with .Site.Author.twitter }}
+{{- with .Site.Params.Author.twitter }}
   <meta name="twitter:site" content="@{{ . }}" />
   <meta name="twitter:creator" content="@{{ . }}" />
   {{- end }}
