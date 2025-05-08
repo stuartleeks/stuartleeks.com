@@ -30,8 +30,8 @@ USER $USERNAME
 #     && sudo apt install snapd
 # RUN sudo snap install hugo --channel=extended
 
-RUN sudo wget https://github.com/gohugoio/hugo/releases/download/v0.147.2/hugo_extended_0.147.2_Linux-64bit.deb
-RUN sudo dpkg -i hugo_extended_0.147.2_Linux-64bit.deb
+RUN sudo wget https://github.com/gohugoio/hugo/releases/download/v0.147.2/hugo_extended_0.147.2_linux-amd64.deb
+RUN sudo dpkg -i hugo_extended_0.147.2_linux-amd64.deb
 
 # ** [Optional] Uncomment this section to install additional packages. **
 #
