@@ -17,7 +17,7 @@ tags:
 
 In the [last post]({{< relref wsl-github-cli-windows-notifications-part-1.md >}}) we saw how to create a drop-in replacement for `notify-send`. This allowed us to take a script that used `notify-send` and run it without modification. In this post, we'll take a look at how we can update that script to take better advantage of Windows notifications.
 
-At the end of the last post, the notification was fairly generic as shown below:
+At the end of that post, the notification was fairly generic as shown below:
 
 ![Notification with WSL Distro as category and "Run finished" as text](./notification-previous.png)
 
@@ -30,7 +30,7 @@ If you just want to grab the scripts then [skip to the bottom](#show-me-the-scri
 
 ## Introducing toast
 
-The `notify-send` replacement from the last post was built using the [go-toast/toast](https://github.com/go-toast/toast) golang package. That repo also includes a handy `toast` CLI. I've create a fork with an updated version that can be run from anywhere twithout displaying a console window and will be using that in this post (see [stuartleeks/toast](https://github.com/stuartleeks/toast)).
+The `notify-send` replacement from the [last post]({{< relref wsl-github-cli-windows-notifications-part-1.md >}}) was built using the [go-toast/toast](https://github.com/go-toast/toast) golang package. That repo also includes a handy `toast` CLI. I've create a fork with an updated version that can be run from anywhere twithout displaying a console window and will be using that in this post (see [stuartleeks/toast](https://github.com/stuartleeks/toast)).
 
 As previously, I've downloaded `toast.exe` (grab the [latest release](https://github.com/stuartleeks/toast/releases/latest)), popped it in my Windows `PATH`. Then I add an alias so that I can call it without the `.exe` extension: `alias toast=toast.exe`.
 
@@ -40,7 +40,7 @@ With this done, I can run `toast --app-id stuartleeks.com --title "Hello from WS
 
 ## Reworking `ghrun`
 
-In the last post, we used the following `ghrun` alias to watch the GitHub workflow and send a notification:
+In the [last post]({{< relref wsl-github-cli-windows-notifications-part-1.md >}}), we used the following `ghrun` alias to watch the GitHub workflow and send a notification:
 
 ```bash
 alias ghrun="gh run list | grep \$(git branch --show-current) | cut -d$'\t' -f 8 | xargs gh run watch && notify-send 'Run finished'"
